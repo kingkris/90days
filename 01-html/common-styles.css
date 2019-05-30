@@ -1,0 +1,14 @@
+body{
+  background-color: #f3f3f3;
+  margin: 0;
+  padding: 40px;
+}
+.container{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+h1{
+  text-align: center;
+  border-bottom: 6px double #ccc;
+}
