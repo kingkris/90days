@@ -16,10 +16,37 @@
       padding: 10px;
       border-radius: 10px;
     }
+    .btn-primary:link{
+      background-color: indigo;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      margin:20px 0 0 10px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .btn-primary:visited{
+      color: white;
+      text-decoration: none;
+    }
+    .btn-primary:hover{
+      background-color: darkorchid;
+    }
+    
+    .widget{
+      border: solid 1px #CCC;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      min-height: 400px;
+    }
   </style>
 </head>
 <body>
-  <div class="container" id="main">
+  <div class="container">
     <header class="site-header">
       <h1>Anchor Tags - Linking the internet all the way</h1>
       <p><small><time datetime="2019-05-30">30<sup>th</sup> May 2019</time></small></p>
@@ -27,6 +54,36 @@
       <a href="04-lists.html">Lists</a>
       <a href="https://www.htmlden.com/" target="blank" >Best Webdesign School</a>
     </header>
+    <main>
+      <h2>Different types of links</h2>
+      <ul>
+        <li>Email link - <a href="mailto:kris@htmlden.com">Kris at htmlden.com</a></li>
+        <li>Email link with "pre written subject" - <a href="mailto:kris@htmlden.com?subject=Whatever Subject you want">Email link with pre defined subject tag</a></li>
+        <li>Adding direct call link - <a href="tel:+919880439463" class="btn-primary">Click to talk to me</a></li>
+        <li>Named Anchor - <a href="#about">About</a> <a href="#services">Services</a> </li>
+        <li><a href="04-lists.html#unordered">Unordered lists on another page</a></li>
+        <li>Download link <a href="DSC_0738.JPG" download>Click here to download the image</a></li>
+      </ul>
+      <div class="widget">
+        <h2 id="about">About</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi velit harum eaque, omnis magnam a quae reprehenderit, amet vel eos beatae sunt nostrum non in architecto cumque doloribus nihil modi! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias deserunt illum quo, animi totam quod doloremque eligendi dicta voluptatibus, distinctio dignissimos tempora itaque labore. Necessitatibus repellat repellendus aspernatur officia non!</p>
+      </div>
+      <div class="widget">
+        <h2 id="services">Services</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus, minima vitae nisi omnis pariatur saepe alias tenetur est quos recusandae eum soluta error voluptatum at! Vitae nostrum est a aliquam.</p>
+        <ul>
+          <li>Service 01</li>
+          <li>Service 02</li>
+          <li>Service 03</li>
+          <li>Service 04</li>
+          <li>Service 05</li>
+        </ul>
+      </div>
+      <div class="widget">
+        <h2 id="gallery">Gallery</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae laborum reiciendis iste vitae voluptatem non assumenda, quod?</p>
+      </div>
+    </main>
   </div>
 </body>
 </html>
