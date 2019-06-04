@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>iframes and social media widgets</title>
+
+
+  <!-- Comment #1: OG Tags -->
+  <meta property="og:url"           content="http://www.krishnegowda.com/" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="KriShne Gowda - Web designer from Bengaluru" />
+  <meta property="og:description"   content="Am designer from Bengaluru, whose creating pixel perfect designs from last two decades" />
+  <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+
+
+  <link rel="stylesheet" href="common-styles.css">
+  <style>
+    .container{
+      max-width:960px;
+      margin: 0 auto;
+    }
+    .site-header{
+      background-color: lightgreen;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .btn-primary:link{
+      background-color: indigo;
+      padding: 10px 20px;
+      border-radius: 25px;
+      display: inline-block;
+      margin:20px 0 0 10px;
+      text-transform: uppercase;
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .btn-primary:visited{
+      color: white;
+      text-decoration: none;
+    }
+    .btn-primary:hover{
+      background-color: darkorchid;
+    }
+    
+    .widget{
+      border: solid 1px #CCC;
+      border-radius: 10px;
+      padding: 15px;
+      background-color: lightblue;
+      margin-bottom: 20px;
+      min-height: 400px;
+    }
+    .iframe{
+      width: 100%;
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+
+  <div class="container">
+    <header class="site-header">
+      <h1>iframes and social media widgets</h1>
+    </header>
+    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.htmlden.com%2F&width=450&layout=standard&action=recommend&size=large&show_faces=true&share=true&height=80&appId=153798451378170" width="450" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhtmlden%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=161670513895758" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+    <main>
+      <h2>iframes</h2>
+      <iframe src="05-links.html" frameborder="0" width="100%" height="500"></iframe>
+
+      <h2>Loading external html page</h2>
+      <iframe src="https://www.htmlden.com" frameborder="0" class="iframe"></iframe>
+
+      <h2>Embedding a map</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.184530547836!2d77.64254295073663!3d12.96004099081862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae140509392093%3A0xa689e281196e5089!2shtmlden+-+school+of+webdesign!5e0!3m2!1sen!2sin!4v1559621566423!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </main>
+  </div>
+
+  <div class="fb-quote"></div>
+</body>
+</html>
