@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS - in { style }</title>
+  <style>
+  
+  body{
+    background-color: #f5f5f5;
+  }
+  .demo{
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto 20px;
+  }
+  .box1{ /*demo of inheritance */
+    font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+    color: red;
+    border: solid 4px lightgreen;
+    padding: 10px;
+  }
+  .box1 *{
+    /* border: solid 4px lightgreen; */
+
+  }
+  .box1 header{
+    color: royalblue;
+  }
+  .box1 header h3{
+    color: orange;
+  }
+  .dabba p{
+    border: solid 1px green;
+  }
+  .dabba ul{
+    border: solid 1px green;
+  }
+  
+
+/*=============================================
+=            Selectors            =
+=============================================*/
+
+
+/* -- Syntax
+
+selector-name {
+  css-property-name: property value;
+  ...:...;
+  ...:...;
+  ...:...;
+  ...:...;
+  ...:...;
+  ...:...;
+  ...:...
+}
+
+
+*/
+
+
+/**
+ *
+ * Universal selector
+ *
+ */
+ *{
+   box-sizing: border-box;
+ }
+ .box1 *{
+    border: solid 4px lightgreen;
+  }
+
+/**
+ *
+ * TAG or TYPE selector
+ *
+ */
+ body{
+   background-color: lightblue;
+   margin: 0;
+ }
+ p{
+   font-size: 18px;
+   margin: 5px 0 10px;
+   color: #444;
+ }
+
+/**
+ *
+ * class selector
+ *
+ */
+ .user-defined-name{
+   background-color: #fff;
+ }
+
+.bg-primary{
+  background-color: royalblue;
+  padding: 10px;
+}
+.lead{
+  font-size: 24px;
+}
+.txt-white{
+  color: white;
+}
+/**
+ *
+ * id selector
+ *
+ */
+ #user-defined-name{
+   background-color: #fff;
+ }
+ #site-header{
+  background-color: crimson;
+  padding: 20px;
+}
+#site-header nav ul{
+  background-color: crimson;
+}
+#site-header nav ul a{
+  color: white;
+}
+
+
+/*=====  End of Selectors  ======*/
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <header id="site-header">
+    <h1>
+      CSS - in { style }
+      <small>learn css from scratch</small>
+    </h1>
+    <nav>
+      <ul class="user-defined-name">
+        <li><a href="#">link01</a></li>
+        <li><a href="#">link02</a></li>
+        <li><a href="#">link03</a></li>
+        <li><a href="#">link04</a></li>
+        <li><a href="#">link05</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="demo">
+  <h2>Inheritance Demo</h2>
+  <div class="box1">
+    <header>
+      <h3>This is box 1 header</h3>
+    </header>
+    <div class="dabba">
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, praesentium architecto excepturi blanditiis ab velit ullam qui ratione deleniti, porro cum corporis nobis eaque provident aperiam laudantium facilis. Magni, expedita!</p>
+      <ul>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+        <li>list items</li>
+      </ul>
+    </div><!-- eo of .dabba -->
+  </div><!-- eo of .box1 -->
+
+  <p class="bg-primary lead txt-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, aut? Amet, corporis quasi? Eos aliquid at est, deleniti unde fugiat totam nesciunt labore eveniet dicta, a vero beatae numquam sapiente.</p>
+
+</section>
+
+
+
+
+
+</body>
+</html>
