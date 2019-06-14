@@ -128,6 +128,61 @@ selector-name {
   color: white;
 }
 
+/**
+ *
+ * Psuedo selectors
+ *
+ */
+
+/* 
+    There are two types
+      ~ Psuedo Classes
+      ~ Psuedo Elements
+
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+    https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+ */
+
+
+
+ .main-links{
+  padding-left: 0;
+  margin-top: 0;
+  list-style: none;
+}
+.main-links::before{
+  content: "Menu";
+  color: #f5f5f5;
+}
+.main-links::after{
+  content: "\00a4 \007e \00a4";
+  color: #f5f5f5;
+}
+.main-links li{
+  display: inline-block;
+  margin-right: 20px;
+}
+.main-links li:first-child{
+  border-left: solid 2px limegreen;
+  padding-left: 10px;
+}
+.main-links li:last-child{
+  border-right: solid 2px limegreen;
+  padding-right: 10px;
+}
+.main-links li a{
+  border: solid 2px limegreen;
+  border-radius: 25px;
+  display: block;
+  padding: 6px 20px;
+  text-decoration: none;
+}
+.main-links li a:hover{
+  border: solid 2px white;
+  background-color: limegreen;
+}
+
 
 /*=====  End of Selectors  ======*/
 
@@ -144,7 +199,7 @@ selector-name {
       <small>learn css from scratch</small>
     </h1>
     <nav>
-      <ul class="user-defined-name">
+      <ul class="main-links">
         <li><a href="#">link01</a></li>
         <li><a href="#">link02</a></li>
         <li><a href="#">link03</a></li>
