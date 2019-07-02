@@ -1,0 +1,183 @@
+body{
+  background-color: #f5f5f5;
+}
+.demo{
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 auto 20px;
+}
+.box1{ /*demo of inheritance */
+  font-family: 'Trebuchet MS', 'Lucida Sans', Arial, sans-serif;
+  color: red;
+  border: solid 4px lightgreen;
+  padding: 10px;
+}
+.box1 *{
+  /* border: solid 4px lightgreen; */
+
+}
+.box1 header{
+  color: royalblue;
+}
+.box1 header h3{
+  color: orange;
+}
+.dabba p{
+  border: solid 1px green;
+}
+.dabba ul{
+  border: solid 1px green;
+}
+
+
+/*=============================================
+=            Selectors            =
+=============================================*/
+
+
+/* -- Syntax
+
+selector-name {
+css-property-name: property value;
+...:...;
+...:...;
+...:...;
+...:...;
+...:...;
+...:...;
+...:...
+}
+
+
+*/
+
+
+/**
+*
+* Universal selector
+*
+*/
+*{
+ box-sizing: border-box;
+}
+.box1 *{
+  border: solid 4px lightgreen;
+}
+
+/**
+*
+* TAG or TYPE selector
+*
+*/
+body{
+ background-color: lightblue;
+ margin: 0;
+}
+p{
+ font-size: 18px;
+ margin: 5px 0 10px;
+ color: #444;
+}
+
+/**
+*
+* class selector
+*
+*/
+.user-defined-name{
+ background-color: #fff;
+}
+
+.bg-primary{
+background-color: royalblue;
+padding: 10px;
+}
+.lead{
+font-size: 24px;
+}
+.txt-white{
+color: white;
+}
+/**
+*
+* id selector
+*
+*/
+#user-defined-name{
+ background-color: #fff;
+}
+#site-header{
+background-color: crimson;
+padding: 20px;
+}
+#site-header nav ul{
+background-color: crimson;
+}
+#site-header nav ul a{
+color: white;
+}
+
+/**
+*
+* Psuedo selectors
+*
+*/
+
+/* 
+  There are two types
+    ~ Psuedo Classes
+    ~ Psuedo Elements
+
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements
+
+*/
+
+
+
+.main-links{
+padding-left: 0;
+margin-top: 0;
+list-style: none;
+}
+.main-links::before{
+content: "Menu";
+color: #f5f5f5;
+}
+.main-links::after{
+content: "\00a4 \007e \00a4";
+color: #f5f5f5;
+}
+.main-links li{
+display: inline-block;
+margin-right: 20px;
+}
+.main-links li:first-child{
+border-left: solid 2px limegreen;
+padding-left: 10px;
+}
+.main-links li:last-child{
+border-right: solid 2px limegreen;
+padding-right: 10px;
+}
+.main-links li a{
+border: solid 2px limegreen;
+border-radius: 25px;
+display: block;
+padding: 6px 20px;
+text-decoration: none;
+}
+.main-links li a:hover{
+border: solid 2px white;
+background-color: limegreen;
+}
+
+
+/*=====  End of Selectors  ======*/
+
+
+
+
+
