@@ -1,0 +1,203 @@
+
+
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+CSS @ Rules
++++++++++++++++++++++++++++++++++++++++++++
+
+    1.  @charset
+    2.  @fontface
+    3.  @import
+    4.  @media
+    5.  @keyframes
+
+
+
+
+Important links
++++++++++++++++++++++++++++++++++++++++++++
+
+https://developer.mozilla.org/en/docs/Web/CSS/At-rule
+
+https://css-tricks.com/the-at-rules-of-css/
+
+https://css-tricks.com/snippets/html/glyphs/
+
+https://daneden.github.io/animate.css/
+
+http://mynameismatthieu.com/WOW/
+
+http://animista.net/
+
+
+
+
+
+*/
+
+/* ==========================================================================
+   Demo of Position related properties
+   ========================================================================== */
+.responsive-img img{
+  width: 100%;
+  display: block;
+}
+
+
+/*----------  Width demo  ----------*/
+
+*{
+  box-sizing: border-box;
+}
+
+.width-demo{
+  max-width: 1000px;
+  margin: 15px auto;
+  padding:15px;
+  border:double 5px red;
+  background-color: #F3F3F3;
+}
+.dabba{
+  width: 100%;
+  background-color: #9bd586;
+  padding:10px;
+}
+
+.dabba img{
+  display: block;
+  width: 50vw
+}
+
+
+/*----------  Aspect ratio  ----------*/
+
+.photos{
+  padding: 15px;
+  background-color: #F3F3F3;
+}
+.photos:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+.photo{
+  padding: 10px;
+  width: 25%;
+  float: left;
+}
+.photo > div{
+  background-color: #FFF;
+  border: solid 1px #CCC;
+  border-radius: 5px;
+  padding: 10px;
+  border-radius: 4px
+}
+.img-wrap{
+  position: relative;
+  overflow:hidden;
+}
+.img-wrap:after{
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url('../img/square-bg.png');
+  content: "";
+  width: 100%;
+  display: block;
+}
+._4x3:after  {padding-top: 75%; }
+._3x4:after  {padding-top: 133.3333%; }
+._1x1:after  {padding-top: 100%; }
+._1x2:after  {padding-top: 50%; }
+._2x1:after  {padding-top: 150%; }
+._16x9:after {padding-top: 56.25%; }
+._9x16:after {padding-top: 177.7778%; }
+.photo img{
+  width: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+
+/*----------  Video styles  ----------*/
+
+.video-banner{
+  position: relative;
+}
+.video-banner video{
+  width: 100%;
+}
+.banner-text{
+  background-color: rgba(0,0,0,.75);
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 40px;
+  color: #FFF;
+}
+.banner-text h2{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+/* responsive video embed */
+
+.video-wrap{
+  max-width: 1500px;
+  margin: 20px auto 50px;
+  border: 10px solid #0005;
+  position: relative;
+  overflow:hidden;
+}
+.video-wrap:after{
+  content: "";
+  width: 100%;
+  display: block;
+  padding-top: 56.25%;
+}
+.video-wrap iframe{
+  width:100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border: 5px solid #000;
+}
+
+/* adjascent selector demo */
+
+.adjacent-demo{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.ad-heading + p {
+  color: red;
+  font-size: 2em;
+}
+
+
+/* sibling selector demo */
+
+.sibling-demo{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.sd-heading ~ p {
+  color: red;
+  font-size: 2em;
+}

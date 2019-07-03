@@ -1,0 +1,295 @@
+@charset 'utf-8';
+@import url('font-awesome.css');
+@import url('header-menu.css');
+
+
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+CSS @ Rules
++++++++++++++++++++++++++++++++++++++++++++
+
+    1.  @charset
+    2.  @fontface
+    3.  @import
+    4.  @media
+    5.  @keyframes
+
+
+ 
+
+Important links
++++++++++++++++++++++++++++++++++++++++++++
+
+https://developer.mozilla.org/en/docs/Web/CSS/At-rule
+
+https://css-tricks.com/the-at-rules-of-css/
+
+https://css-tricks.com/snippets/html/glyphs/
+
+https://daneden.github.io/animate.css/
+
+http://mynameismatthieu.com/WOW/
+
+http://animista.net/
+
+
+
+
+
+*/
+
+
+
+/*----------  form1 styles  ----------*/
+
+form{
+  background-color: #CCC;
+  padding: 50px;
+  border-radius: 10px;
+}
+fieldset{
+  border: dotted 1px #000;
+  margin-top: 15px;
+}
+fieldset legend{
+  font-size: 20px;
+  font-weight: 400;
+}
+.f-row{
+  background-color: #FFF;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+fieldset .f-row:last-child{
+  margin-bottom: 0;
+}
+.last-row{
+  background-color: #FFF;
+  padding: 15px;
+  margin:15px 0;
+  text-align: right;
+}
+.f-row:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+.f-row label{
+  display: inline-block;
+  width: 150px;
+  font-size: 13px;
+  text-align: right;
+  padding: 3px 5px 0 0;
+  border: dotted 1px #F3F3F3;
+}
+.rd-row{
+  display: inline-block;
+  padding-right: 10px
+}
+.rd-row label{
+  text-align: left;
+  width: auto;
+}
+.rd-row input:checked + label{
+  color: red;
+  text-decoration: line-through;
+}
+
+/*----------  Styling input type text  ----------*/
+
+.f-row input[type="email"],
+.f-row input[type="text"],
+.input-box{
+  padding: 4px 6px;
+  border: solid 1px #CCC;
+  border-radius: 3px;
+  color: #546E7A;
+  font-size: 14px;
+  width: 250px;
+}
+.input-txtarea{
+  max-width: 450px;
+  height: 150px;
+  vertical-align: top;
+  resize: horizontal;
+}
+.input-select{
+  width: 250px;
+  height: 100px;
+  vertical-align: top;
+}
+.f-row input[type="email"]:hover,
+.f-row input[type="text"]:hover,
+.input-box:hover{
+  border-color: #90CAF9;
+  box-shadow: 0 0 5px 2px #BBDEFB;
+}
+.f-row input[type="text"]:active,
+.f-row input[type="text"]:focus,
+.f-row input[type="email"]:active,
+.f-row input[type="email"]:focus,
+.input-box:active,
+.input-box:focus{
+  border-color: #1E88E5;
+  box-shadow: 0 0 5px 2px #42A5F5;
+}
+.f-row input[type="email"]:invalid,
+.f-row input[type="text"]:invalid,
+.input-box:invalid{
+  border-color: #E53935;
+  box-shadow: 0 0 5px 2px #E57373;
+}
+
+.f-row .error-msg{
+  font-size: 13px;
+  color: #F44336;
+  padding-left: 20px;
+  display: none;
+}
+.f-row input[type="email"]:invalid + .error-msg,
+.f-row input[type="text"]:invalid + .error-msg,
+.input-box:invalid + .error-msg{
+  display: inline-block;
+}
+.f-row input[disabled]{
+  color: gray;
+  background-color: lightgray
+}
+
+
+.info-text{
+  font-size: 13px;
+  color: #4CAF50;
+  padding-left: 20px;
+}
+.info-text:before{
+  content: "\02602";
+  font-size: 15px;
+  padding-right: 5px;
+}
+  /*content: "\026A0"; /*warning*/
+
+.info-text a{
+  color: #FFF;
+  background-color: #4CAF50;
+  padding: 3px 5px;
+  text-decoration: none;
+}
+
+
+/*----------  Styling placeholder with fallbacks  ----------*/
+
+.f-row input::-ms-placeholder    {color: #CFD8DC; font-style: italic; }
+.f-row input::-webkit-placeholder{color: #CFD8DC; font-style: italic; }
+.f-row input::placeholder        {color: #CFD8DC; font-style: italic; }
+
+
+.input-icon{
+  /*background-image: url('../img/bullet-20x20.png');*/
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA+0lEQVQ4jaXTL0sEURQF8N88LTbTikGELWKyrWDaYBDBahBE0S+wfVnQpEUQwWhQ8EsIKmzVIFgEEUw2dVGLwT9hZmRYZpGZOeVd3n3nvHu550bLnXcD0EYLX9jHbt6j4Uw8ikPM4xnTmdwO5jCGK3Tw2i9wgJUkruV8tpScDdSxCCG5HEFzUC85WECUCsziERMFBCJcoB7EfeeV/B+aOAmYLEFOMRNwWkHgMmC8gkA3SMZREmsBDxUEegGruC9BfkM74BZT+ChAvhG7sZs68QfnBQTOxPvyZ2XYwDHucN1H+MYTPsVj304T2WV6wXoSD2EPm+hhC0d5pfwCpsEpxARB1SgAAAAASUVORK5CYII=');
+  background-repeat: no-repeat;
+  background-position: 5px center;
+  padding-left: 30px !important
+}
+
+.input-font-icon{
+  border: solid 1px #CCC;
+  border-radius: 4px;
+  padding: 1px;
+  width: 250px;
+  display: inline-block;
+  position: relative;
+}
+.input-font-icon:before{
+  width: 20px;
+  height: 20px;
+  content: "\f00e";
+  text-align: center;
+
+  font: normal normal normal 14px/20px FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: absolute;
+  left: 6px;
+  top:0;
+  bottom:0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.input-font-icon input[type="text"]{
+  border: none;
+  width: 100%;
+  padding: 4px 4px 4px 30px;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.7.0');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*----------  Styling Enquiry form  ----------*/
+
+.enquiry-wrap{
+  margin: 30px;
+  padding: 50px;
+  background-color: #FFF3E0;
+}
+.enquiry-form{
+  background-color: #FFE0B2;
+  padding-right: 15px;
+  border-radius: 15px;
+}
+
+
+/*----------  coverpic styles  ----------*/
+
+.cover-pic{
+  width: 500px;
+  height: 260px;
+  background-image: url('../img/cover-pic.jpg');
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  margin: 60px auto 20px;
+  border-radius: 10px;
+  position: relative;
+}
+.cover-pic:before{
+  width: 0;
+  height: 0;
+  background-image: url('../img/cover-pic.jpg');
+  background-repeat: no-repeat;
+  background-position: center 0;
+  position: absolute;
+  content: "";
+  border-right: solid 40px white;
+  border-left: solid 40px white;
+  border-bottom: solid 40px transparent;
+  left: 0;
+  right: 0;
+  top: -40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cover-pic h1{
+  padding: 30px 15px;
+  margin: 0;
+  text-align: center;
+  color: #FFF;
+}
+

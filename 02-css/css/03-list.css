@@ -1,0 +1,86 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+List related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+~  list-style-type: none
+                    disc | circle | square ----- for ul
+                    decimal | decimal-leading-zero | lower-roman | upper-roman --- for ol
+                    lower-alpha | upper-alpha
+                    kannada | tamil | devanagari | malayalam
+    ^ default value for ul li is disc
+    ^ default value for ol li is decimal
+    ^ This property gets inherited
+    ^ This property can be applied to list elements
+    ^ Can't animate
+
+~  list-style-position: outside | inside
+    ^ default value for outside
+    ^ This property gets inherited
+    ^ This property can be applied to list elements
+    ^ Can't animate
+
+~  list-style-image: none | url()
+    ^ default value for none
+    ^ This property gets inherited
+    ^ This property can be applied to list elements
+    ^ Can't animate
+
+
+  counter-increment
+  counter-reset
+
+auto;
+inherit;
+
+List related important links
++++++++++++++++++++++++++++++++++++++++++++
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters
+
+*/
+
+/* ==========================================================================
+   Demo of List related properties
+   ========================================================================== */
+
+
+   .ul-wrap{
+       border: 1px solid #000;
+       background-color: lightgreen;
+   }
+   .ul-default-style-demo{
+        border: 1px solid #000;
+        background-color: #fff;
+   }
+   .ul-default-style-demo li{
+        border: 1px solid red;
+        background-color: lightblue;
+   }
+
+
+.ls-demo{
+    list-style-type: devanagari;
+    list-style-position: inside;
+}
+
+.ls-demo ul{
+    list-style-image: url('../img/bullet.png');
+}
+
+/* reset the defaults */
+ul.linkz{
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+}

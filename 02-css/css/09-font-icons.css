@@ -1,0 +1,73 @@
+
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+CSS @ Rules
++++++++++++++++++++++++++++++++++++++++++++
+
+    1.  @charset
+    2.  @fontface
+    3.  @import
+    4.  @media
+    5.  @keyframes
+
+
+
+
+Important links
++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+*/
+
+/*----------  CSS Layout styles  ----------*/
+
+.wrapper *{
+  box-sizing: border-box;
+}
+.wrapper{
+  margin-left: 15px;
+  margin-right: 15px;
+  box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    width: 748px;
+  }
+}
+@media (min-width: 980px) {
+  .wrapper{
+    width: 940px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper{
+    width: 1170px;
+  }
+}
+.row:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+
+
+
+
+
+/* ==========================================================================
+   usage of special characters in CSS
+   ========================================================================== */

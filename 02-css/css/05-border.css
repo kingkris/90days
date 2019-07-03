@@ -1,0 +1,227 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+Border related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+~  border-width -
+    ^ default value 3px - normal
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+
+~  border-style: none solid dotted dashed 
+                  double ridge groove inset outset
+    ^ default value none
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+
+~  border-color: 
+    ^ default value is color of text
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+
+border-top-style: ;
+border-top-width: ;
+border-top-color: ;
+
+border-right-style: ;
+border-right-width: ;
+border-right-color: ;
+
+border-bottom-style: ;
+border-bottom-width: ;
+border-bottom-color: ;
+
+border-left-style: ;
+border-left-width: ;
+border-left-color: ;
+
+Shorthand property
+border-top: [border-top-style border-top-width border-top-color]
+border-right: [border-right-style border-right-width border-right-color]
+border-bottom: [border-bottom-style border-bottom-width border-bottom-color]
+border-left: [border-left-style border-left-width border-left-color]
+
+
+Shorthand property
+border: [border-style border-width border-color]
+
+
+
+~  border-radius – length or percentage-
+    ^ default value is auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+
+border-image:
+
+border-collapse
+border-spacing
+empty-cells – show | hide
+
+
+
+
+auto;
+inherit;
+
+Border related important links
++++++++++++++++++++++++++++++++++++++++++++
+
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
+
+
+*/
+
+/* ==========================================================================
+   Demo of Border related properties
+   ========================================================================== */
+
+
+
+   .dabba{
+    background-color: wheat;
+    padding: 10px;
+    min-height: 75px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.dabba:after{
+    content: "";
+    width: 120%;
+    height: 0;
+    border-bottom: 1px dotted #00F;
+    position: absolute;
+    bottom: -30px;
+    left: -10%;
+}
+.dabba:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 8px solid #FFF;
+    position: absolute;
+    bottom: -47px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: wheat;
+    z-index: 100;
+}
+
+
+
+
+   .bd-demo1{
+    border-style: solid;
+    color: green;
+}
+.bd-demo2{
+    border-top-style: solid;
+    border-top-color: green;
+    border-top-width: 20px;
+    
+    border-right-style: solid;
+    border-right-color: blue;
+    border-right-width: 20px;
+    
+    border-bottom-style: solid;
+    border-bottom-color: orange;
+    border-bottom-width: 20px;
+    
+    border-left-style: solid;
+    border-left-color: purple;
+    border-left-width: 20px;
+    
+}
+.bd-demo3{
+
+    border-top: 20px solid green;
+
+    border-right: 20px solid blue;
+    
+    border-bottom: 20px solid orange;
+    
+    border-left: 20px solid purple;
+    
+}
+.bd-demo4{
+    border-style: solid dotted dashed double;
+    border-width: 5px 2px 10px 20px; 
+    border-color:red blue green orange;
+}
+
+.bd-demo5{
+    border: 1px solid #000;
+}
+
+.sq1{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-right: 5px;
+
+}
+
+.bdrd1{ border-radius: 10px;}
+.bdrd2{border-radius: 30%;}
+.bdrd3{border-radius: 50%;}
+.bdrd4{border-radius: 50% 0 10px 0;}
+.bdrd5{border-radius: 10% 0 100% 0;}
+.bdrd6{border-radius: 10% 0 100% 100%;}
+.bdrd7{
+    padding: 0 30px 0;
+    border-radius: 100%;
+}
+.bdrd8{
+    padding: 15px 0  0 30px ;
+    border-radius: 100%;
+}
+
+
+.width-demo{
+    display: inline-block;
+    min-width: 300px;
+    max-width: 400px; 
+}
+
+.float-demo{
+    float: left;
+}
+
+
+.img-bdr-demo{
+    border-image-slice: 13 14 13 13;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: round round;
+    border-image-source: url("https://mdn.mozillademos.org/files/6007/border-image-1.png");  
+    width: 400px;
+    min-height: 200px;
+    margin:40px auto;
+    padding: 40px;
+}

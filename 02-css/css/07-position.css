@@ -1,0 +1,303 @@
+@charset "UTF-8";
+@import '06-box.css';
+
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+Position related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+~  position: static | relative | absolute | fixed  |  sticky
+    ^ default value static
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+    eg: 
+      .someclass{position:relative}
+      .someclass{position:absolute}
+      .someclass{position:sticky}
+      .someclass{position:fixed}
+
+~  top   : <length>
+~  bottom: <length>
+~  right : <length>
+~  left  : <length>
+    ^ default value auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all positioned elements
+    ^ You can animate
+
+~  z-index: auto | <integer>
+    ^ default value auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all positioned elements
+    ^ You can animate
+
+
+
+~  visibility: visible | hidden | collapse
+Applies to all elements
+overflow: visible | hidden | scroll | auto
+overflow-x
+overflow-y
+
+
+auto;
+inherit;
+
+Background related important links
++++++++++++++++++++++++++++++++++++++++++++
+
+https://developer.mozilla.org/en/docs/Web/CSS/background-color
+*/
+
+/* ==========================================================================
+   Demo of Position related properties
+   ========================================================================== */
+
+
+   .container{
+       border: 5px solid #000;
+       padding: 10px;
+   }
+
+.static-demo{
+    border: 1px solid #000;
+    top: 100px;
+    right: 100px;
+    position: static;
+}
+
+.relative-demo{
+    border: 1px solid #000;
+    position: relative;
+    background-color: #fff;
+    top:30px;
+    left: 100px;
+}
+
+.relative1{
+    z-index: 2;
+}
+
+.relative2{
+    top: 15px;
+    z-index: 1;
+}
+
+
+
+/**
+ *
+ * Colors
+ *
+ */
+ .orange{background-color: orange;}
+ .blue{background-color: blue;color: #FFF}
+ .black{background-color: black;color: #FFF}
+ .green{background-color: green;}
+ .limegreen{background-color: limegreen;}
+ .wheat{background-color: wheat;}
+ .indigo{background-color: indigo;color: #FFF}
+
+
+
+
+
+.abs-demo  {
+    position: relative;
+}
+.abs-demo > div {
+    border: 2px solid #000;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+.abs-demo > div:last-child {
+    margin-bottom: 0
+}
+
+.abs-demo > div.black {
+    border-color: crimson;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+.abs-demo > div.blue {
+    position: relative;
+    top: 20px;
+}
+.abs-demo > div.limegreen {
+    position: static;
+    top: 20px;
+}
+.abs-demo > div.wheat {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 0;
+}
+
+
+.sticky-btn{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: limegreen;
+    border-radius: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #FFF;
+    line-height: 100px;
+    z-index: 100;
+}
+
+
+
+
+/*=============================================
+=            Article Card            =
+=============================================*/
+
+@media (min-width:768px){
+    .articles{
+        max-width:770px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+}
+
+.img-card{
+    position: relative;
+}
+.img-card .article-img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.img-card .article-video{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+.img-card .logo-wrap{
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    right: 35px;
+}
+.img-card .logo{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+    color: #fff;
+}
+.img-card .logo img{
+    vertical-align: middle;
+}
+.img-card .fav{
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/heart.png');
+    background-position: center;
+    cursor: pointer;
+    float: right;
+}
+
+.img-card .content{
+    position: absolute;
+    bottom: 75px;
+    left: 35px;
+    margin-right: 35px;
+    color: #FFF;
+    font-size: 13px;
+}
+@media (min-width:768px){
+    .img-card .content{
+        font-size: 16px;
+        max-width:400px;
+    }
+}
+.img-card .content h2{
+    font-size: 3em;
+    margin: 0;
+}
+.img-card .content p{
+    font-size: 1em;
+    margin: 0;
+}
+.img-card nav{
+    position: absolute;
+    bottom: 28px;
+    width: 200px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.img-card nav a{
+    position: relative;
+    width: 30px;
+    display: inline-block;
+}
+.img-card nav a span{
+    color: #FFF;
+    text-decoration: none;
+    border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;
+    cursor: pointer
+}
+.img-card nav a:after{
+    width: 20px;
+    height: 3px;
+    background-color: #555;
+    content:"";
+    position: absolute;
+}
+
+.img-card nav a.active:after{
+    background-color: #FFF;
+}
+
+
+
+/*=============================================
+=            demo of position: sticky            =
+=============================================*/
+
+
+.dabba{
+    padding: 20px;
+    background-color: wheat;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.dabba h2{
+    position: sticky;
+    top: 5px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+

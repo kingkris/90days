@@ -1,0 +1,108 @@
+
+
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+
+border-collapse
+border-spacing
+empty-cells – show | hide
+
+
+
+*/
+
+/* ==========================================================================
+   Demo of Position related properties
+   ========================================================================== */
+.responsive-img img{
+  width: 100%;
+  display: block;
+}
+
+
+/*----------  Width demo  ----------*/
+
+*{
+  box-sizing: border-box;
+}
+
+.mytbl{
+  border: solid 3px green;
+  width: 60%;
+  margin: 20px auto;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+.mytbl caption{
+  margin-top: 20px;
+  background-color: green;
+  padding: 20px;
+  color: #FFF;
+  border-radius: 10px 10px 0 0;
+}
+.mytbl td{
+  border: solid 3px green;
+}
+.mytbl th{
+  border: solid 3px green;
+  background-color: darkgreen;
+  color: #FFF;
+  padding: 4px;
+}
+.mytbl_sl{width: 100px}
+.mytbl_email{width: 200px}
+
+.tbl1{
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: solid 1px #CCC;
+}
+.tbl1 td,
+.tbl1 th{
+  border: solid 1px #888;
+}
+.tbl1 th{
+  background-color: #CCC;
+  padding: 10px;
+  border-color: #BBB;
+}
+.tbl1 td{
+  padding: 5px;
+}
+
+.tbl1 tr{
+  cursor: pointer;
+}
+.tbl1 tr:nth-child(odd){
+  background-color: lightgreen
+}
+.tbl1 tr:nth-child(even){
+  background-color: lightblue
+}
+.tbl1 tr:hover{
+  background-color: wheat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

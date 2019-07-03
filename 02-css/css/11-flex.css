@@ -1,0 +1,227 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+ Flex Rules
++++++++++++++++++++++++++++++++++++++++++++
+
+display: flex | inline-flex
+flex-direction: row | column | row-reverse | column-reverse
+flex-wrap: nowrap  | wrap | wrap-reverse
+justify-content: flex-start | flex-end | center | space-between | space-around
+align-items: flex-start | flex-end | center | baseline | stretch
+align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+
+
+flex-grow : 
+flex-shrink :
+flex-basis : <width> | fill | max-content | min-content | fit-content | content | 
+
+
+
+
+Shorthand is flex: [flex-grow] [flex-shrink] [flex-basis]
+
+
+
+
+
+Some important links
++++++++++++++++++++++++++++++++++++++++++++
+
+http://flexbox.buildwithreact.com/
+
+https://loading.io/flexbox/
+
+https://flexbox.help/
+
+
+
+http://bennettfeely.com/flexplorer/
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-on-codepen--cms-23937
+
+https://flexbox.webflow.com/#collectiongrid
+
+*/
+
+/* ==========================================================================
+   Demo of Flex related properties
+   ========================================================================== */
+
+   *,
+   *:after,
+   *:before{
+     box-sizing: border-box;
+   }
+   
+   .wrapp{
+     background-color: #F4D3FF;
+     padding:30px 50px;
+   }
+   .wrapp:nth-child(odd){background-color: #D3DDFF; }
+   .wrapp h2.sub-title{border-bottom-color: #FFF; }
+   .wrapp h2.sub-title span{background-color: #FFF; }
+   
+   .parent{
+     border: solid 4px red;
+     padding: 10px;
+     margin:20px 0;
+   }
+   .child > div{
+     border: solid 2px green;
+     padding: 10px;
+     background-color: #fff;
+   }
+   .child img{
+     display: block;
+     width:100%;
+     height:auto;
+   }
+   
+   
+   /*----------  When child element are inline-blocks  ----------*/
+   .parent-ib > .child{
+      padding: 10px;
+      display: inline-block;
+      width: 20%;
+    }
+   
+   /*----------  When child elements are applied with floats  ----------*/
+   .parent-float > .child{
+     padding: 10px;
+     float:left;
+     width: 20%;
+   }
+   .parent-float:after{
+    content:"";
+    clear: both;
+    display: block;
+   }
+   
+   /*----------  Display Flex  ----------*/
+   .parent-flex{
+     display: flex;
+     flex-direction: row;
+     flex-wrap:wrap;
+     justify-content: space-around;
+     align-items: stretch;
+     align-content:center;
+     min-height: 1200px
+   }
+   .parent-flex > .child{
+     padding: 10px;
+     width: 25%;
+     border: dotted 1px red;
+   }
+
+   /* to make the child elements of equal height */
+   /* 
+    .parent-flex > .child > div{
+        height: 100%;
+    } 
+   */
+   
+   /*----------  Display Flex - child properties: order ----------*/
+   .parent-flex1{
+     display: flex;
+     flex-direction: row;
+     flex-wrap:wrap;
+     justify-content: center;
+     align-items: stretch;
+     align-content:flex-start;
+     min-height: 1200px
+   }
+   .parent-flex1 > .child{
+     padding: 10px;
+     width: 20%;
+     border: dotted 1px red;
+     order:4;
+   }
+   .parent-flex1 > .child:nth-child(3){
+     order:1;
+   }
+   .parent-flex1 > .child:nth-child(6){
+     order:2;
+   }
+   .parent-flex1 > .child:nth-child(2){
+     order:3;
+   }
+   .sixth{
+     order:1;
+   }
+   
+   /*----------  Display Flex - child properties: order ----------*/
+   .parent-flex2{
+     display: flex;
+     flex-direction: row;
+     flex-wrap:wrap;
+     justify-content: center;
+     align-items: stretch;
+   }
+   .parent-flex2 > .child{
+     padding: 10px;
+     border: dotted 1px red;
+     flex-grow: 0;
+     flex-shrink: 0;
+     flex-basis:33.333%;
+   }
+   
+
+
+
+
+
+   /*----------  Display Flex - child properties: order ----------*/
+
+
+.flex-header1{
+  background-color: crimson;
+  padding: 10px 15px;
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-header1 .logo{
+  border: solid 1px white;
+}
+.flex-header1 .logo img{
+  display: block;
+}
+.flex-header1 nav{
+  border: solid 1px white;
+}
+
+
+
+
+.flex-header2{
+  background-color: crimson;
+  padding: 10px 15px;
+  margin: 30px 0;
+}
+.flex-header2 .--container{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-header2 .logo{
+  border: solid 1px white;
+}
+.flex-header2 .logo img{
+  display: block;
+}
+.flex-header2 nav{
+  border: solid 1px white;
+}
+
+

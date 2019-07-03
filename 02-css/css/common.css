@@ -1,0 +1,87 @@
+
+html{	
+	font-size: 16px;
+	font-family: 'Roboto', tahoma, sans-serif;
+	font-weight: 300;
+	line-height: 1.4;
+
+	font: normal 300 16px/1.4 'Roboto', tahoma, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	font-family: 'Noto Serif SC', Georgia, serif;
+}
+
+body{
+	overflow-y:scroll;
+	margin: 0;
+}
+
+.--container{
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px 15px;
+  border: solid 2px red;
+}
+@media (min-width:768px) {
+  .--container{max-width: 768px; }
+}
+@media (min-width:980px) {
+  .--container{max-width: 980px; }
+}
+@media (min-width:1200px) {
+  .--container{max-width: 1200px; }
+}
+
+
+.demo-wrap{
+  max-width: 970px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++
+
+								HEADER Styles
+
++++++++++++++++++++++++++++++++++++++++++++*/
+
+.page-header{
+	background-color: #7C4DFF;
+	padding-top: 20px;
+}
+.page-header h1{
+	text-align: center;
+	color: #7C4DFF;
+	margin-top: 0;
+}
+.page-header h1 a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+.main-nav{
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+}
+.main-nav li{
+	display: inline-block;
+}
+.main-nav li a{
+	display: block;
+	padding: 4px 5px;
+	text-decoration: none;
+	color: rgb(189, 189, 189);
+}
+.main-nav li a:hover,
+.main-nav li.active a{
+	text-decoration: underline;
+	color: #FFF;
+}
+

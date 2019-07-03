@@ -1,0 +1,433 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+block related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+~  word-spacing: normal | <length>
+~  letter-spacing : normal | <length>
+    ^ default value is auto
+    ^ This property gets inherited
+    ^ This property can be applied to all the elements
+    ^ Can animate
+
+~  vertical-align : baseline | sub | super | text-top | text-bottom | middle | top | bottom | <percentage> | <length>
+    ^ default value is baseline
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to very few elements, like img, input, td, tr, table
+    ^ you can animate
+https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
+
+
+~  text-align : left | right | center | justify
+    ^ default value is left - depends on page direction
+    ^ This property gets inherited
+    ^ This property can be applied to all the elements
+    ^ Can't animate
+
+~  text-indent
+    ^ default value is auto
+    ^ This property gets inherited
+    ^ This property can be applied to block level elements
+    ^ Can't animate
+
+~  white-space: normal | pre | nowrap | pre-wrap | pre-line
+    ^ default value is auto
+    ^ This property gets inherited
+    ^ This property can be applied to block level elements
+    ^ Can't animate
+    https://developer.mozilla.org/en/docs/Web/CSS/white-space
+
+
+~  display: block | inline | inline-block | 
+            table | table-row | table-cell | 
+            list-item | none
+    ^ default value is auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements
+    ^ You can animate
+
+~  content – 
+~  text-overflow - clip | ellipsis 
+
+
+
+auto;
+inherit;
+
+*/
+
+
+
+
+/* ==========================================================================
+   Demo of Block related properties
+   ========================================================================== */
+
+   .word-spacing-demo{
+       word-spacing: 10px;
+   }
+   .letter-spacing-demo{
+    letter-spacing: 10px;
+    }
+
+
+    .va-demo{
+        vertical-align: top;
+    }
+    .va-demo2{
+        vertical-align: super;
+    }
+    .va-demo3{
+        vertical-align: sub;
+    }    
+    .va-demo4{
+        vertical-align: middle;
+    }
+
+    .ta-demo,
+    .ta-demo1,
+    .ta-demo2,
+    .ta-demo3,
+    .ta-demo4{
+        border: 1px solid #000;
+        padding: 10px;
+    }
+    .ta-demo1{
+        padding: 10px;
+    }
+    .ta-demo2{
+        padding: 10px;
+    }
+    .ta-demo3{
+        padding: 10px;
+    }
+    .ta-demo4{
+        padding: 10px;
+    }
+
+
+
+.ti-demo{
+    text-indent: 20px;
+}
+
+
+
+
+.ws-demo{
+    white-space: pre;
+}
+.ws-demo-nowrap{
+    white-space: nowrap;
+}
+
+
+.ws-demo-pre-wrap{
+    white-space: pre-wrap;
+}
+
+.ws-demo-pre-line{
+    white-space: pre-line;
+}
+
+.profile-box{
+    width: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: lightblue;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.profile-box img{
+    border-radius: 50%;
+}
+.profile-box h2{
+    word-wrap: break-word;
+}
+
+.bx{
+    border: 1px solid #000;
+}
+
+.display-demo1{
+    display: inline;
+}
+.display-demo2{
+    display: block;
+}
+
+
+/* 
+***************************************
+***********Navigation menu style*******
+***************************************
+*/
+
+.linkz{
+    list-style: none;
+    margin: 50px 0 25px;
+    padding: 0 0 0 10px;
+    border-bottom: 4px solid #5c007a;
+}
+.linkz > li{
+    display: inline-block;
+    position: relative;
+}
+.linkz > li > a{
+    display: block;
+    position: relative;
+    padding: 2px 10px;
+    background-color: #8e24aa;
+    border-radius: 6px 6px 0 0;
+    color: #FFF;
+    text-decoration: none;
+}
+.linkz > li.active > a{
+    padding-top: 6px;
+    background-color: #5c007a;
+}
+.linkz > li.has-submenu > a{
+    padding-right: 30px;
+}
+.linkz > li.has-submenu > a:after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border-bottom: 1px solid #FFF;    
+    border-right: 1px solid #FFF; 
+    transform: rotate(45deg)   
+}
+.linkz > li > a:hover{
+    background-color: #5c007a;
+}
+.linkz .submenu{
+    position: absolute;
+    border: 1px solid rgba(69, 214, 2, 0.89);
+    background-color: #fff;
+    top: 20px;
+    left: 0;
+    padding-left: 0;
+    display: none;
+}
+.linkz > li:hover .submenu{
+    display: block;
+}
+
+.linkz .submenu li{
+    padding: 4px
+}
+.linkz .submenu li a{
+    padding: 4px;
+    background-color: rgb(3, 94, 3);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.display-inline-demo{
+    width: 300px;
+    display: inline-block;
+}
+
+
+
+/* 
+***************************************
+***********Navigation menu style*******
+***************************************
+*/
+
+.linkz1{
+    list-style: none;
+    margin: 50px 0 25px;
+    padding: 0 0 0 10px;
+}
+.linkz1 > li{
+    display: inline-block;
+    position: relative;
+}
+.linkz1 > li > a{
+    display: block;
+    position: relative;
+    padding: 2px 20px;
+    background-color: #8e24aa;
+    border-radius: 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+.linkz1 > li.active > a{
+    background-color: #5c007a;
+}
+.linkz1 > li.has-submenu > a{
+    padding-right: 30px;
+}
+.linkz1 > li.has-submenu > a:after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border-bottom: 1px solid #FFF;    
+    border-right: 1px solid #FFF; 
+    transform: rotate(45deg)   
+}
+.linkz1 > li > a:hover{
+    background-color: #5c007a;
+}
+.linkz1 .submenu{
+    position: absolute;
+    border: 1px solid rgba(69, 214, 2, 0.89);
+    background-color: #fff;
+    top: 20px;
+    left: 0;
+    padding-left: 0;
+    display: none;
+}
+.linkz1 > li:hover .submenu{
+    display: block;
+}
+
+.linkz1 .submenu li{
+    padding: 4px
+}
+.linkz1 .submenu li a{
+    padding: 4px;
+    background-color: rgb(3, 94, 3);
+    color: #FFF;
+    text-decoration: none;
+}
+
+
+/* 
+***************************************
+***********Content demo****************
+***************************************
+*/
+
+.content-demo{
+    border: 1px solid #CCC;
+    border-radius: 15px;
+    background-color: aliceblue;
+    padding: 20px 40px
+}
+.content-demo li:before{
+    content: "Chapter: ";
+}
+
+
+
+/* 
+***************************************
+***********text-overflow demo**********
+***************************************
+*/
+
+
+
+.widget{
+	min-width: 300px;
+	max-width: 800px;
+	margin: 20px auto 20px auto;
+	border-radius: 10px;
+
+	background-color: #8343f0;
+}
+.widget h1{
+	background-color: rgba(0,0,0,.2);
+	margin: 0 0 20px;
+	color: #FFF;
+	padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    
+    /* truncating text */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+
+
+}
+.widget p{
+	color: #FFF;
+	padding: 15px 20px;
+}
+.widget footer{
+	background-color: rgba(255,255,255,.2);
+	color: #FFF;
+	padding: 15px 20px;
+	border-radius: 0 0 10px 10px;
+}
+
+
+/* 
+***************************************
+********Interactive Image menu*********
+***************************************
+*/
+
+.iPhone{
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+    width: 150px;
+    position: relative;
+}
+.iPhone > li > a{
+    display: block;
+    padding: 20px;
+    background-color: #ff7f15;
+    border: 1px solid #FFF;
+    color: #FFF;
+    text-decoration: none;
+}
+.iPhone > li.active > a{
+    background-color: #5c007a;
+}
+.iPhone > li.active > a:after{
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 27px;
+    right: -6px;
+    border-bottom: 1px solid #FFF;    
+    border-right: 1px solid #FFF; 
+    transform: rotate(-45deg);
+    z-index: 100;
+}
+.iPhone > li > a:hover{
+    background-color: #5c007a;
+}
+.iPhone .submenu{
+    position: absolute;
+    border: 1px solid rgba(69, 214, 2, 0.89);
+    background-color: #fff;
+    top: 0;
+    left: 150px;
+    padding-left: 0;
+    display: none;
+    width: 605px;
+}
+.iPhone > li:hover .submenu{
+    display: block;
+}
+.iPhone > li.active .submenu{
+    display: block;
+}
+
+.iPhone .submenu img{
+    display: block;
+}

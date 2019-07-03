@@ -1,0 +1,623 @@
+/* ==========================================================================
+    Few points to remeber for every CSS property
+    +++++++++++++++++++++++++++++++++++++++++++++++
+    • Default values for different elements
+    • Overriding & different values that can be given
+    • Inheritence
+    • Can they be applied to all elements
+    • Can they be animated
+   ========================================================================== */
+/*
+
+Box related style properties
++++++++++++++++++++++++++++++++++++++++++++
+
+~  width: <length>
+    ^ default value auto - for block level it is 100%, for inline it is content width
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  min-width: <length>
+    ^ default value auto - for block level it is 100%, for inline it is content width
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  max-width: <length>
+    ^ default value auto - for block level it is 100%, for inline it is content width
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  height: <length>
+    ^ default value auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  min-height: <length>
+    ^ default value auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  max-height: <length>
+    ^ default value auto
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to 
+                all block level elements
+                all floated elements
+                all positioned elements
+    ^ You can animate
+
+~  overflow: visible | hidden | scroll | auto
+    ^ default value visible
+    ^ This property doesn't gets inherited
+    ^ This property can be to all elements
+    ^ You can animate
+
+~  overflow-x: visible | hidden | scroll | auto
+~  overflow-y: visible | hidden | scroll | auto
+
+~  padding-top: 
+~  padding-right: 
+~  padding-bottom: 
+~  padding-left: 
+
+~  padding: 
+    ^ default value is
+            for ol and ul padding-left 40px
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements, except
+            padding-top and padding-bottom, they won't
+            work on inline elements
+    ^ You can animate
+
+
+
+~  margin-top: 
+~  margin-right: 
+~  margin-bottom: 
+~  margin-left: 
+
+~  margin: 
+    ^ default value 
+    ^ This property doesn't gets inherited
+    ^ This property can be applied to all elements, except
+            margin-top and margin-bottom, they won't
+            work on inline elements
+    ^ You can animate
+
+~  box-sizing: content-box | padding-box | border-box
+    ^ default value content-box
+    ^ This property doesn't gets inherited
+    ^ This property can be to all elements
+    ^ You can't animate
+
+
+~  float : none | left | right
+    ^ default value none
+    ^ This property doesn't gets inherited
+    ^ This property can be to all elements
+    ^ You can animate
+
+
+~  clear: none | left | right | both
+    ^ default value none
+    ^ This property doesn't gets inherited
+    ^ This property can be to all elements
+    ^ You can't animate
+
+
+
+
+
+
+
+
+
+cursor:
+https://developer.mozilla.org/en-US/docs/Web/CSS/cursor
+
+
+
+opacity 
+resize - none | both | horizontal | vertical | block | inline
+Flexbox
+column-count
+column-gap
+column-fill – auto | balance
+column-rule - <'column-rule-width'> || <'column-rule-style'> || <'column-rule-color'>
+
+grids
+
+
+auto;
+inherit;
+
+Box related important links
++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+*/
+
+/* ==========================================================================
+   Demo of Box related properties
+   ========================================================================== */
+
+   .dabba{
+       border: 1px solid #000;
+       background-color: lightgreen;
+   }
+
+   .demo-wrap{
+       border: 1px solid #000;
+   }
+   
+.w-demo{width: 300px;}
+
+.mar-20{
+    margin: 20px 0;
+}
+.min-w-demo{min-width: 400px;}
+
+.display-ib{display: inline-block;}
+
+
+
+.box1{
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 20px;
+}
+
+.overflow-demo{ overflow: hidden;}
+.overflow-demo1{ overflow: scroll;}
+.overflow-demo2{ overflow: auto;}
+
+.m-demo{
+    margin: 20px;
+    border: solid 1px red;
+}
+
+
+.wrapp{
+    border: solid 5px green;
+    margin: 10px 10px 0;
+    padding: 20px;
+}
+.dabba1{
+    border: 5px solid #F00;
+    background-color: lightblue;
+    padding: 20px;
+}
+
+.item{
+    border: 1px solid #000;
+    background-color: tomato;
+    width: 100px;
+    min-height: 100px;
+    display: inline-block;
+    margin: 15px;
+}
+.pad-20{
+    padding: 10px;
+}
+
+
+
+.box-sizing-demo{
+    border: 25px solid #000;
+    background: wheat;
+    padding: 25px;
+    width: 200px;
+    height: 200px;
+}
+/* width = border-left + padding-left + width + padding-right + border-right */
+/* padding and border are will be excluded in the width specified */
+
+.box-sizing-demo1{
+    border: 25px solid #000;
+    background: wheat;
+    padding: 25px;
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+}
+/* width = width  */
+/* padding and border are will be within the width specified */
+
+
+
+.parent0{
+    background-color: lightgreen;
+    border: 5px solid #000;
+    margin: 20px;
+}
+.parent0 div{ border: 5px solid red;}
+.parent0 .child1{ border-color: orange; }
+.parent0 .child2{ border-color: green }
+
+/*=============================================
+=            Demo of floats            =
+=============================================*/
+
+.parent{
+    background-color: lightgreen;
+    border: 5px solid #000;
+    margin: 20px;
+}
+.parent span,
+.parent div{
+    border: 5px solid red;
+}
+
+.parent .child1{
+    float: left;
+    border-color: orange;
+    margin: 10px;
+}
+.parent .child2{
+    border-color: green;
+    background-color: salmon;
+    float: right;
+    margin: 10px;
+}
+.parent .child3{}
+
+
+/* ~  clear: none | left | right | both */
+.clear{
+    clear: both;
+}
+
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+
+/**
+ *
+ * Layout1 styles
+ *
+ */
+
+.layout1{
+    background-color: coral;
+    margin: 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.layout1:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.layout1 .logo{
+    float: left;
+}
+
+.layout1 .main-linkz{
+    float: right;
+    border: 1px solid #000;
+    margin-top: 10px;
+}
+
+
+
+/**
+ *
+ * Layout2 styles
+ *
+ */
+
+ .layout2{
+    background-color: silver;
+    margin: 20px;
+    border-radius: 10px;
+}
+.layout2:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.layout2 .content{
+    float: left;
+    width: 200px;
+    border: 1px solid #000;
+    min-height: 200px;
+}
+.layout2 .features{
+    float: right;
+    width: calc(100% - 230px);
+    border: 1px solid #000;
+}
+
+/**
+ *
+ * Layout3 styles
+ *
+ */
+
+ .layout3{
+    background-color: silver;
+    margin: 20px;
+    border-radius: 10px;
+}
+.layout3:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.layout3 .content{
+    float: left;
+    width: 200px;
+    border: 1px solid #000;
+    min-height: 200px;
+}
+.layout3 .features{
+    float: right;
+    width: 700px;
+    border: 1px solid #000;
+
+}
+
+/**
+ *
+ * Layout4 styles
+ *
+ */
+
+ .layout4{
+    background-color: silver;
+    margin: 20px;
+    border-radius: 10px;
+}
+.layout4:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.layout4 .content{
+    float: left;
+    width: 200px;
+    border: 1px solid #000;
+    min-height: 200px;
+}
+.layout4 .features{
+    border: 1px solid #000;
+    margin-left: 230px;
+
+}
+
+
+/*=============================================
+=            Assignment - pawtastic           =
+=============================================*/
+
+.row{
+    margin: 20px 0;
+    box-sizing: border-box;
+}
+.row *{
+    box-sizing: border-box;
+}
+.row:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+/* Setting typography */
+
+
+.container{
+    transition: all 250ms ease;
+}
+@media(min-width:768px){
+    .container{
+        width: 768px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media(min-width:980px){
+    .container{
+        width: 960px;
+    }
+}
+@media(min-width:1200px){
+    .container{
+        width: 1170px;
+    }
+}
+
+.col-left{
+    background-color: #4b4f67;
+    padding: 30px;
+    background-image: url('../img/dog.png');
+    background-repeat: no-repeat;
+    background-position: 140% bottom;
+    background-size: 60%;
+    color: #FFF;
+}
+@media (min-width:768px){
+    .col-left{
+        float: left;
+        width: 40%;
+        padding: 40px 20px 180px 30px;
+        background-position: center bottom;
+        background-size: 100%;
+    }
+}
+@media (min-width:980px){
+    .col-left{
+        padding: 54px 62px 202px 62px;
+    }
+}
+@media (min-width:1200px){
+    .col-left{
+        padding: 78px 62px 392px 128px;
+    }
+}
+.col-left img{
+    display: block;
+    border: 1px solid #000;
+    max-width: 50%;
+    transition: all 250ms ease;
+}
+.col-left h1{
+    font-size: 24px;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+.col-left ul{
+    border: 1px solid #000;
+    padding: 0 40px 0 15px;
+
+}
+@media (min-width:980px){
+    .col-left img{
+        max-width: 100%;
+    }
+    .col-left h1{
+        font-size: 34px;
+    }
+}
+
+
+.col-right{
+    background-color: #F7ECEB;
+    padding: 20px;
+}
+@media (min-width:768px){
+    .col-right{
+        float: right;
+        width:60%;
+        padding: 30px;
+    }
+}
+@media (min-width:1200px){
+    .col-right{
+        padding: 64px 54px 54px 128px;
+    }
+}
+.col-right h2{
+    font-size: 32px;
+    line-height: 40px;
+}
+
+.product-3col{
+    background-color: #ebd0ce;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.product-3col:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.product-3col img{
+    background-color: #FFF;
+    float: left;
+    width: 64px;
+    height: 64px;
+    padding: 10px;
+    border-radius: 50%;
+    margin:27px 30px;
+}
+.product-3col .price{
+    float: right;
+    font-size: 14px;
+    color: #545871;
+    padding: 24px 34px;
+    border-left: 1px solid #f7eceb;
+    width: 150px
+    
+}
+.product-3col .price strong{
+    display: block;
+    font-size: 28px;
+
+}
+
+.product-3col .prod-desc{
+    border: 1px solid #000;
+    margin-left: 124px;
+    margin-right: 160px;
+}
+@media (min-width:768px) and (max-width:979px){
+    .product-3col .prod-desc{
+        margin-left: 20px;
+        margin-right: 20px;
+        clear: both;
+    }
+    
+}
+/*=====  End of Assignment - pawtastic  ======*/
+
+.bg-red{
+    background-color: #F00;
+}
+
+/* Opacity Demo */
+.opacity-demo{
+    font-size: 80px;
+    font-weight: bold;
+    border: 10px solid #000;
+    background-color: #0f03;
+    color: #0008;
+    opacity: 0.2;
+    transition: all 250ms ease;
+}
+
+.opacity-demo:hover{
+    opacity: 1;
+}
+
+.box{
+    border: 4px solid #000;
+    background-color: #fff;
+    font-size: 30px;
+}
+.dn-demo{
+    display: none;
+}
+.visibility-demo{
+    visibility: hidden
+}
+
+.text-col-demo {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 1px solid rgba(28,110,164,0.5);
+}
+
+
