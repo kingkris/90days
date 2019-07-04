@@ -59,9 +59,9 @@
         <i>This is an i tag</i>
       </div>
       <div class="demo-content fstyle-demo1">
-          font-style:normal being applied
+          font-style:normal being applied, Watch out the <strong>address & i tags</strong>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque id laborum facilis minus nam nulla beatae architecto officia ullam obcaecati! Molestias error, delectus non eos tenetur ut suscipit quisquam autem!</p>
-          <address class="fstyle-demo1">
+          <address>
             this is a adress tag
           </address>
           <i>This is an i tag</i>
@@ -115,11 +115,98 @@
 
       <div class="demo-box">
         <h2>
-          <span>Demo of font-style</span>
-          <i>normal | italic | oblique</i>
+          <span>Demo of font-size</span>
+          <i>&lt;length&gt; -- px, %, em, rem, vw, vh</i>
         </h2>
         <div class="demo-content">
+          <h1 class="fsz-10vw">H1 tag - 10vw</h1>
+          <h1 class="fsz-100per">H1 tag - 100%</h1>
+          <h1 class="fsz-30px">H1 tag - 30px</h1>
+          <h1 class="fsz-3em">H1 tag - 3em</h1>
+          <h1 class="fsz-3rem">H1 tag - 3rem</h1>
         </div>
+        <hr>
+        <div class="demo-content">
+          <div class="nounit">
+            No Unit applied to parent element
+            <h1>h1 tag</h1>
+            <h3>h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-px">
+              font size: 20px applied to parent element
+            <h1>Pixel Wrap - h1 tag</h1>
+            <h3>Pixel Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-em">
+              font size: 2em applied to parent element
+            <h1>em Wrap - h1 tag</h1>
+            <h3>em Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-per">
+              font size: 200% applied to parent element
+            <h1>em Wrap - h1 tag</h1>
+            <h3>em Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-rem">
+              font size: 2rem applied to parent element
+            <h1>em Wrap - h1 tag</h1>
+            <h3>em Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+        </div>
+  
+
+Applying relevant font-sizes to child elements
+
+
+        <hr>
+        <div class="demo-content">
+          <div class="wrap-px1">
+              font size: 20px applied to parent element, 30px for h1 and 18 for p
+            <h1>Pixel Wrap - h1 tag</h1>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-em1">
+              font size: 2em applied to parent element, 2em for h1 and 1em for p
+            <h1>em Wrap - h1 tag</h1>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-per1">
+              font size: 200% applied to parent element, h1 - 200%, p - 100%
+            <h1>per Wrap - h1 tag</h1>
+            <h3>per Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+          <hr>
+          <div class="wrap-rem1">
+              font size: 2rem applied to parent element, 2rem to h1, 1rem to p
+            <h1>rem Wrap - h1 tag</h1>
+            <h3>rem Wrap - h3 tag</h3>
+            <p>p tag - Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, earum laudantium laboriosam officia quae vel optio magni, pariatur odit aspernatur eaque minima suscipit voluptatibus mollitia maiores ea est similique aliquam.</p>
+          </div>
+        </div>
+
+        <hr>
+        <p>Animating font size</p>
+
+        <div class="fsz-anim">
+          <h1>Roll over to see the animation</h1>
+        </div>
+  
+
+
+
+
       </div><!-- eo .demo-box -->
   
   
@@ -139,5 +226,26 @@
       
 
   </div><!-- eo .wrap -->
+
+
+  <div class="demodabba vwdemo1">
+    this 100 vw
+  </div>
+  <div class="demodabba vwdemo2">
+    this 80 vw
+  </div>
+  <div class="demodabba vwdemo3">
+    this 60 vw
+  </div>
+  <div class="demodabba vwdemo4">
+    this 50 vw
+  </div>
+  <div class="demodabba vwdemo5">
+    this 25 vw
+  </div>
+  <div class="pxdemo">
+    this 100 px
+  </div>
+
 </body>
 </html>

@@ -30,6 +30,9 @@ Font related style properties
 		^ This property can be applied to all the elements
 		^ you can animate
 
+
+
+
 ~  line-height:
 		^ px, %, em, rem, vw, vh
 		^ This property gets inherited
@@ -142,4 +145,67 @@ inherit;
 	.fweght700{font-weight:700}
 	.fweght800{font-weight:800}
 	.fweght900{font-weight:900}
+
+
+
+	.demodabba{
+		border: solid 10px red;
+		position: relative;
+		z-index: 10;
+		box-sizing: border-box;
+	}	
+	.vwdemo1{width: 100vw;}	
+	.vwdemo2{width: 80vw;}	
+	.vwdemo3{width: 60vw;}	
+	.vwdemo4{width: 50vw;}	
+	.vwdemo5{width: 25vw;}	
+	.pxdemo{
+		width: 100px;
+		border: solid 10px green;
+		position: relative;
+		z-index: 10;
+		background-color: #fff;
+	}
+/* actual width = Left Border + Left Padding + width + Right Padding + Right Border*/
+
+.fsz-10vw{font-size: 10vw}
+.fsz-100per{font-size: 100%}
+.fsz-30px{font-size: 30px}
+.fsz-3em{font-size: 3em}
+.fsz-3rem{font-size: 3rem}
+
+.wrap-px{	font-size: 20px;}
+.wrap-em{	font-size: 2em;}
+.wrap-per{font-size: 200%;}
+.wrap-rem{font-size: 2rem;}
+
+.wrap-px1{	font-size: 20px;}
+.wrap-px1 h1{	font-size: 30px;}
+.wrap-px1 p{	font-size: 18px;}
+
+.wrap-em1{	font-size: 2em;}
+.wrap-em1 h1{	font-size: 2em;}
+.wrap-em1 p{	font-size: 1em;}
+
+.wrap-per1{font-size: 200%;}
+.wrap-per1 h1{font-size: 200%;}
+.wrap-per1 p{font-size: 100%;}
+
+.wrap-rem1{font-size: 2rem;}
+.wrap-rem1 h1{font-size: 2rem;}
+.wrap-rem1 p{font-size: 1rem;}
+
+.fsz-anim{
+/* font: [font-style font-weight font-size/line-height font-family] */
+
+	font: italic normal 2em/1.4 "Roboto", sans-serif;
+	transition: all 250ms ease-out;
+}
+.fsz-anim:hover{
+	font-size:2.5em;
+	color: blueviolet;
+}
+
+
+
 
