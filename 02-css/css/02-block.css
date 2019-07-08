@@ -54,6 +54,8 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/vertical-align
     ^ This property doesn't gets inherited
     ^ This property can be applied to all elements
     ^ You can animate
+https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
 
 ~  content – 
 ~  text-overflow - clip | ellipsis 
@@ -67,18 +69,22 @@ inherit;
 
 
 
-
 /* ==========================================================================
    Demo of Block related properties
    ========================================================================== */
 
    .word-spacing-demo{
-       word-spacing: 10px;
+       word-spacing: 50px;
    }
    .letter-spacing-demo{
     letter-spacing: 10px;
     }
 
+
+    .logo-div{
+        background-color: crimson;
+        padding: 10px;
+    }
 
     .va-demo{
         vertical-align: top;
@@ -93,26 +99,6 @@ inherit;
         vertical-align: middle;
     }
 
-    .ta-demo,
-    .ta-demo1,
-    .ta-demo2,
-    .ta-demo3,
-    .ta-demo4{
-        border: 1px solid #000;
-        padding: 10px;
-    }
-    .ta-demo1{
-        padding: 10px;
-    }
-    .ta-demo2{
-        padding: 10px;
-    }
-    .ta-demo3{
-        padding: 10px;
-    }
-    .ta-demo4{
-        padding: 10px;
-    }
 
 
 
@@ -123,21 +109,9 @@ inherit;
 
 
 
-.ws-demo{
-    white-space: pre;
-}
-.ws-demo-nowrap{
-    white-space: nowrap;
-}
-
-
-.ws-demo-pre-wrap{
-    white-space: pre-wrap;
-}
-
-.ws-demo-pre-line{
-    white-space: pre-line;
-}
+.ws-pre{   white-space: pre;}
+.ws-nowrap{   white-space: nowrap;}
+.ws-pre-line{   white-space: pre-line;}
 
 .profile-box{
     width: 200px;
@@ -165,6 +139,54 @@ inherit;
 .display-demo2{
     display: block;
 }
+
+
+/* Demo of display */
+
+.nav-demo{
+    background-color: lightseagreen;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.nav-demo ul{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.nav-demo > ul > li{
+    border:solid 1px red;
+    display: inline-block;
+    
+    padding: 5px 0 5px 0;
+    margin-right: 10px;
+    position: relative;
+}
+.nav-demo ul li .sub-menu{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 180px;
+    background-color: #fff;
+    z-index: 10;
+    display: none;
+}
+.nav-demo ul li:hover .sub-menu{
+    display: block;
+}
+
+/* content demo */
+
+
+.content-demo:before{
+    content: "This text is coming via css"
+}
+
+.price:before{
+    content: "\20B9";
+}
+
+
 
 
 /* 

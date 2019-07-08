@@ -65,26 +65,29 @@ Shorthand property
 		^ you can animate
 
 color values can be applied in 4 diff formats
-		colornames - eg. red; http://htmlcolorcodes.com/color-names/
-		hex decimal codes - eg. #FF0000
-    0 1 2 3 4 5 6 7 8 9 A B C D E F
+		1. colornames - eg. red; http://htmlcolorcodes.com/color-names/
+		2. hex decimal codes - eg. #FF0000
+				0 1 2 3 4 5 6 7 8 9 A B C D E F
 
-    RR GG BB
-    00 00 00 (Black) --> #000
-    FF 00 00 (Red)   --> #F00
-    00 FF 00 (Green) --> #0F0
-    00 00 FF (Blue)  --> #00F
-    FF FF FF (White) --> #FFF
+				RR GG BB
+				00 00 00 (Black) --> #000
+				FF 00 00 (Red)   --> #F00
+				00 FF 00 (Green) --> #0F0
+				00 00 FF (Blue)  --> #00F
+				FF FF FF (White) --> #FFF
 
-			hex decimal shorthand property - eg. #F00
-				#ff0011 -- #f01
-				#aa2233 -- #a23
-				#da1122 -- #da1122
-				#fafafa -- #fafafa
-				#fff222 -- #fff222
+			### hex decimal shorthand property - eg. #F00
+					#ff0011 -- #f01
+					#aa2233 -- #a23
+					#da1122 -- #da1122
+					#fafafa -- #fafafa
+					#fff222 -- #fff222
 
-		rgb value - eg. rgb(255,0,0)
-		rgba value - eg. rgba(255,0,0,1) - css3
+		3. rgb value - eg. rgb(255,0,0)
+		4. rgba value - eg. rgba(255,0,0,1) - css3
+		5. hexdecimal Alpha #FF00FF1A
+
+		https://css-tricks.com/8-digit-hex-codes/
 
 ~  text-decoration:none | underline | overline | line-through
 		^ default value is none, only for 'a' tag you have underline
@@ -205,6 +208,38 @@ inherit;
 	font-size:2.5em;
 	color: blueviolet;
 }
+
+.widget{font-size: 40px;}
+.widget h1{font-size: 30px}
+.widget h3{font-size: 18px}
+.widget p{font-size: 16px}
+
+
+.widget-em{font-size: 40px}
+.widget-em h1{font-size: 2em}
+.widget-em h3{font-size: 1em}
+.widget-em p{font-size: .8em}
+
+.widget-rem{font-size: 40px}
+.widget-rem h1{font-size: 2rem}
+.widget-rem h3{font-size: 1rem}
+.widget-rem p{font-size: .8rem}
+
+.color-demo div{
+	background-color: green;
+	margin-bottom: 20px;
+	padding: 20px;
+	font-size: 60px;
+	font-weight: 900;
+	font-family: poppins, sans-serif;
+}
+
+.color-name{color: white}
+.color-hex{color: #FFFFFF}
+.color-hex-sh{color: #FFF}
+.color-rgb{color: rgb(255,255,255)}
+.color-rgba{color: rgba(255,255,255,.1)}
+.color-8digit-hex{color: #ffffff1a}
 
 
 
