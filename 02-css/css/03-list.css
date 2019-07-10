@@ -47,11 +47,19 @@ List related important links
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters
 
+https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/
 */
 
 /* ==========================================================================
    Demo of List related properties
    ========================================================================== */
+
+
+.ol-demo{
+    list-style: circle;
+}
+
+
 
 
    .ul-wrap{

@@ -155,25 +155,106 @@ inherit;
     list-style: none;
 }
 .nav-demo > ul > li{
-    border:solid 1px red;
     display: inline-block;
-    
-    padding: 5px 0 5px 0;
-    margin-right: 10px;
+    padding: 0;
+    margin-right: 0px;
     position: relative;
 }
+.nav-demo > ul > li:last-child{
+    margin-right: 0;
+}
+.nav-demo > ul > li > a{
+    color: #FFF;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: solid 1px white;
+    border-radius: 15px 15px 2px 2px;
+
+    display: block;
+    padding: 0 18px 0 40px;
+}
+.nav-demo > ul > li > a:hover{
+    background-color: #FFF;
+    color: lightseagreen;
+}
+/* styles for icon */
+.nav-demo > ul > li > a::before{
+    content: "\03C6";
+    border: 1px solid white;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    left:15px;
+    top: 6px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 15px;
+    font-size: 15px;
+}
+.nav-demo > ul > li > a:hover::before{
+    border-color: lightseagreen;
+}
+
 .nav-demo ul li .sub-menu{
+    border-radius: 2px;
+    background-color: #fff;
+
+    display: none;
+    padding: 10px;
+    width: 165px;
+
     position: absolute;
     left: 0;
     top: 30px;
-    width: 180px;
-    background-color: #fff;
     z-index: 10;
-    display: none;
 }
 .nav-demo ul li:hover .sub-menu{
     display: block;
 }
+.nav-demo ul li .sub-menu a{
+    border-bottom: 1px solid rgba(32, 178, 171, 0.187);
+    color: lightseagreen;
+    font-size: 14px;
+    line-height: 28px;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    position: relative;
+}
+.nav-demo ul li .sub-menu li:last-child a{
+    border-bottom: none;
+}
+
+::selection{
+    background-color: green;
+    color: white;
+}
+
+
+
+
+.nav-demo ul li .sub-menu li:first-child a{
+}
+.nav-demo ul li .sub-menu li:nth-child(even) a{
+    color: red;
+}
+
+/* 
+nth-child values
+    odd
+    even
+    2n -- even
+    2n+1 - odd
+    3n -- every third element
+    4n -- every 4th element
+*/
+
+
+
+
 
 /* content demo */
 
