@@ -57,9 +57,30 @@ https://www.smashingmagazine.com/2019/07/css-lists-markers-counters/
 
 .ol-demo{
     list-style: circle;
+    border: 1px solid #000;
+}
+.ol-demo-kannada{
+    list-style: kannada;
+    border: 1px solid #000;
+}
+.ol-demo-hindi{
+    list-style: devanagari;
+    border: 1px solid #000;
+}
+.ol-demo-alpha{
+    list-style: lower-alpha;
+    border: 1px solid #000;
 }
 
-
+.li-style-demo{
+    border: 1px solid #000;
+    background-color: #CCC;
+    list-style-position: outside;
+    list-style-image: url('../img/bullet-1.png')
+}
+.li-style-demo li{
+    margin-bottom: 10px;
+}
 
 
    .ul-wrap{

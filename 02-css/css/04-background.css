@@ -78,9 +78,41 @@ https://developer.mozilla.org/en/docs/Web/CSS/background-color
    Demo of Background related properties
    ========================================================================== */
 
+.demo-min-height{
+    min-height: 500px;
+}
+
+.demo-bg-color{
+    background-color: #8873f6;
+}
+
+.demo-bg-image{
+    background-color: #8873f6;
+    background-image: url('../img/bg-email.png');
+}
+.demo-bg-image1{
+    background-color: #8873f6;
+    background-image: url('../img/bg-image-small.jpg');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
    body{
-       background-color: aliceblue;
+       /* background-color: aliceblue; */
    }
 
    .one,
