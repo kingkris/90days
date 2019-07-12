@@ -94,10 +94,69 @@ https://developer.mozilla.org/en/docs/Web/CSS/background-color
     background-color: #8873f6;
     background-image: url('../img/bg-image-small.jpg');
 }
+.demo-bg-image2{
+    background-color: #53c213;
+    background-image: url('../img/6-line-large.png');
+}
 
+.demo-bg-attachement{
+    background-color: #8873f6;
+    background-image: url('../img/Beautiful-Scenery.jpg');
+    background-attachment: fixed;
+}
 
+.demo-bg-attachement1{
+    background-color: #8873f6;
+    background-image: url('../img/luxury-european-modern-beautiful-scenery.jpg');
+    background-attachment: scroll;
+}
 
+.demo-bg-position{
+    background-color: #53c213;
+    background-image: url('../img/9-fill-medium.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+.demo-bg-position2{
+    background-color: #53c213;
+    background-image: url('../img/12-fill-medium.png');
+    background-repeat: no-repeat;
+    background-position: 100px 100px;
+}
 
+.demo-bg-position3{
+    background-color: #53c213;
+    background-image: url('../img/bg2.png');
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    min-height: 1000px
+}
+
+.div-sprites{
+    padding: 30px;
+    background-color: rgb(226, 241, 127);
+    display: flex;
+}
+.div-sprites div{
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    margin-right: 10px;
+    background-image: url('../img/sprite.png');
+}
+.div-sprites div:first-child{background-position: 0 0;}
+.div-sprites div:nth-child(2){background-position: -80px 0;}
+.div-sprites div:nth-child(3){background-position: -160px 0;}
+.div-sprites div:nth-child(4){background-position: -240px 0;}
+.div-sprites div:nth-child(5){background-position: -320px 0;}
+.div-sprites div:nth-child(6){background-position: -400px 0;}
+.div-sprites div:nth-child(7){background-position: -480px 0;}
+.div-sprites div:nth-child(8){background-position: -560px 0;}
+.div-sprites div:nth-child(9){background-position: -640px 0;}
+.div-sprites div:nth-child(10){background-position: 0 -80px;}
+.div-sprites div:nth-child(11){background-position: -80px -80px;}
+.div-sprites div:nth-child(12){background-position: -160px -80px;}
+.div-sprites div:nth-child(13){background-position: -240px -80px;}
 
 
 
