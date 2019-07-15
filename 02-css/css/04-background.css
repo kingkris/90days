@@ -136,12 +136,15 @@ https://developer.mozilla.org/en/docs/Web/CSS/background-color
     padding: 30px;
     background-color: rgb(226, 241, 127);
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 400px;
 }
 .div-sprites div{
     width: 60px;
     height: 60px;
     background-color: #fff;
-    margin-right: 10px;
+    margin:0 10px 10px 0;
     background-image: url('../img/sprite.png');
 }
 .div-sprites div:first-child{background-position: 0 0;}
@@ -157,6 +160,113 @@ https://developer.mozilla.org/en/docs/Web/CSS/background-color
 .div-sprites div:nth-child(11){background-position: -80px -80px;}
 .div-sprites div:nth-child(12){background-position: -160px -80px;}
 .div-sprites div:nth-child(13){background-position: -240px -80px;}
+
+
+
+
+.signup-links{
+    border-top: 1px solid #000;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+.signup-links a{
+    color: #FFF;
+    text-decoration: none;
+    padding:0 10px
+}
+.signup-links a:first-child{
+    border-right: 1px solid #FFF;
+}
+.signup-links a:hover{
+    text-decoration: underline;
+}
+
+.nav-linkz{
+    list-style: none;
+    padding-left: 0;
+    padding-top: 30px;
+    border-top: 1px solid #000;
+    margin: 30px 0;
+
+}
+.nav-linkz:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.nav-linkz li:not(:last-child){
+    float: left;
+    border-right: 1px solid #FFF;
+}
+.nav-linkz li a{
+    margin-right: 15px;
+    margin-left: 15px;
+    position: relative;
+    color: #FFF;
+    text-decoration: none;
+}
+.nav-linkz li a:after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: all 250ms ease;
+}
+.nav-linkz li a:hover:after{
+    width: 100%;
+}
+
+.bemo-bg-size-contain{
+    background-image: url('../img/Awesome-Scenery-Wallpaper.jpeg');
+    background-size: contain;
+}
+.bemo-bg-size-cover{
+    background-image: url('../img/Awesome-Scenery-Wallpaper.jpeg');
+    background-size: cover;
+}
+.bemo-bg-size-normal{
+    background-image: url('../img/Awesome-Scenery-Wallpaper.jpeg');
+}
+.bemo-bg-size-length{
+    background-image: url('../img/Awesome-Scenery-Wallpaper.jpeg');
+    background-size: 500px auto;
+}
+
+
+.demo-bgorigin{
+    border: 30px solid #0000006b;
+    padding: 50px;
+    background-image: url('../img/Beautiful-Scenery.jpg');
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-clip: border-box;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+.spacer{
+    min-height: 1200px;
+}
+
+.demo-multiple-bg{
+    min-height: 600px;
+    background-image:url('../img/bg2.png'), url('../img/circular_patterns-03.png'),  url('../img/Beautiful-Scenery.jpg');
+    background-attachment: scroll, fixed, scroll;
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-size: auto, 400px, cover;
+    background-position: right bottom, 0 0, 0 0;
+}
+
+
+.demo-gradient-bg{
+    min-height: 400px;
+    background: #cedce7;
+    background: linear-gradient(to right,  #cedce7 0%,#596a72 100%);
+}
 
 
 
