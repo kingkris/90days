@@ -92,6 +92,91 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Background_and_Borders/Bord
    Demo of Border related properties
    ========================================================================== */
 
+.demo-bdr-box{
+    width: 300px;
+    margin: 30px auto 0;
+    padding: 5px;
+    min-height: 100px;
+}
+
+
+.demo-bdr-width{
+    border-color: red;
+    border-style: solid;
+    border-width: 20px
+}
+.demo-bdr-width1{
+    border-color: red;
+    border-style: solid;
+    border-width: 20px 10px 30px 40px;
+}
+.demo-bdr-style{
+    border-color: red;
+    border-width: 20px;
+    border-style: outset;
+}
+.demo-bdr-style1{
+    border-color: red;
+    border-width: 20px;
+    border-style: solid dotted dashed;
+}
+.demo-bdr-color{
+    color: green;
+    border-width: 20px;
+    border-style: solid;
+}
+.demo-bdr-color1{
+    border-color: green orange;
+    border-width: 20px;
+    border-style: solid;
+}
+.demo-bdr-shorthand{
+    border-top:solid 20px green;
+    border-right:solid 20px red;
+    border-bottom:solid 20px orange;
+    border-left:solid 20px blue;
+}
+
+.demo-bdr-shorthand1{
+    border:solid 20px rgba(0, 128, 0, 0.379);
+}
+.bdr-radius{
+    background-origin: border-box;
+    border-radius: 50%;
+    height: 300px;
+    background-image: url('../img/Beautiful-Scenery.jpg');
+}
+
+.bdr-img{
+    border-image-slice: 27 27 27 27;
+    border-image-width: 20px 20px 20px 20px;
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch;
+    border-image-source: url("https://mdn.mozillademos.org/files/6007/border-image-1.png"); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
    .dabba{
