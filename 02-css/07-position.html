@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Box Related CSS Properties</title>
+  <title>Position Related CSS Properties</title>
   <link rel="stylesheet" href="css/00-common.css">
   <link rel="stylesheet" href="css/07-position.css">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -34,19 +34,63 @@
   </header><!-- eo .sh -->
   <div class="wrap">
     <header class="page-title">
-      <h1>Box Related Style Properties</h1>
+      <h1>Position Related Style Properties</h1>
     </header>
 
     <div class="demo-box demo-box-big">
       <h2>
-        <span>Demo of overflow</span>
-        <i>default is 3px</i>
+        <span>Demo of Float & Clear</span>
+        <i>none | left | right</i>
       </h2>
       <div class="demo-content">
-        <div class="demo-overflow">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eius eligendi at laborum consequatur ab! Delectus aspernatur est nesciunt doloribus consequuntur. Minima saepe culpa perspiciatis, maiores enim a magni consequatur! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum sit soluta libero veritatis vero! Possimus tempora nobis, quaerat officiis laboriosam iusto delectus minus dicta nemo, accusantium commodi. Voluptas, libero voluptatum?</div>
+        <div class="box1">
+          <img src="img/Beautiful-Scenery.jpg" alt="Scenery"  class="img-scene">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem voluptatibus distinctio numquam non vitae. Officia recusandae laboriosam vel nihil? Officia quae nam repellat veritatis amet, ea autem fugiat esse dolores. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio blanditiis ratione fugit aspernatur veniam. Nam ad laboriosam modi ex magnam. Cum, tenetur sequi quidem pariatur animi corrupti dolores dicta excepturi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis distinctio animi quos quod omnis commodi facilis eum ab tempore voluptatum explicabo odit, rerum at veritatis vel voluptate dolor tempora cum.
+        </div>
       </div>
-
     </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box demo-box-big">
+      <h2>
+        <span>Demo of Position</span>
+        <i>static</i>
+      </h2>
+      <div class="demo-content">
+        <div class="box2 orange"> 1 box2 -- Orange </div>
+        <div class="box2 blue"> 2 box2 -- Blue </div>
+        <div class="box2 green pos-static"> 3 box2 -- Green TOP, LEFT </div>
+        <div class="box2 red"> 4 box2 -- Red </div>
+        <div class="box2 crimson"> 5 box2 -- Crimson </div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box demo-box-big">
+      <h2>
+        <span>Demo of Position</span>
+        <i>relative</i>
+      </h2>
+      <div class="demo-content">
+        <div class="box3 orange"> 1 box3 -- Orange </div>
+        <div class="box3 blue pos-relative"> 2 box3 -- Blue </div>
+        <div class="box3 green pos-relative top-right"> 3 box3 -- Green position: relative </div>
+        <div class="box3 red pos-relative"> 4 box3 -- Red </div>
+        <div class="box3 crimson"> 5 box3 -- Crimson </div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box demo-box-big">
+      <h2>
+        <span>Demo of Position</span>
+        <i>absolute</i>
+      </h2>
+      <div class="demo-content pos-relative">
+        <div class="box3 orange"> 1 box3 -- Orange </div>
+        <div class="box3 blue pos-absolute top-right"> 2 box3 -- Blue -- Position:absolute</div>
+        <div class="box3 green"> 3 box3 -- Green </div>
+        <div class="box3 red"> 4 box3 -- Red </div>
+        <div class="box3 crimson"> 5 box3 -- Crimson </div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+
+
+
 
 <div class="spa cer"></div>
 

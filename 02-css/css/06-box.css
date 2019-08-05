@@ -240,6 +240,8 @@ Box related important links
     background: -moz-linear-gradient(top,  #2d2f33 0%, #000000 100%);
     background: -webkit-linear-gradient(top,  #2d2f33 0%,#000000 100%);
     background: linear-gradient(to bottom,  #2d2f33 0%,#000000 100%);
+    cursor: col-resize;
+    opacity: .5;
  }
  ._container{
     margin-left: 10px;
@@ -272,8 +274,16 @@ Box related important links
     border: 1px solid #FFF;
 }
 
-
-
+.demo-resize{
+    width: 400px;
+    margin: 50px auto;
+    border: solid 4px crimson;
+    min-height: 100px;
+    resize: both;
+}
+.demo-rsize{
+    resize: horizontal;
+}
 
 
 
