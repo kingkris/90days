@@ -210,5 +210,46 @@ https://developer.mozilla.org/en/docs/Web/CSS/background-color
 
 
 
+/*=============================================
+=            Feature section            =
+=============================================*/
+.features{}
+.features * {box-sizing: border-box}
+  .features h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+  }
+  .feature-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+    .feature-list:after{
+      clear: both;
+      display: block;
+      content: "";
+    }
+    .feature-list li{
+      border: solid 1px red;
+      float: left;
+      width: 20%;
+      text-align: center;
+      padding-top: 90px;
+      background-image: url('../img/what-you-get-icons.svg');
+      background-repeat: no-repeat;
+    }
+.icn-real-exp {background-position: 44px 0;}
+.icn-accom    {background-position: -247px 0;}
+.icn-local    {background-position: -514px 0;}
+.icn-foodie   {background-position: -760px 0;}
+.icn-trans    {background-position: -985px 0;}
+
+
+/*=====  End of Feature section  ======*/
+
+
+
+
 
 

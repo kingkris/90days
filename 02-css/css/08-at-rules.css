@@ -48,6 +48,160 @@ http://animista.net/
 */
 
 @font-face {
+  font-family: '90-days';
+  src:
+    url('../fonts/90-days.ttf?ebr3x3') format('truetype'),
+    url('../fonts/90-days.woff?ebr3x3') format('woff'),
+    url('../fonts/90-days.svg?ebr3x3#90-days') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Attribute selector-- targets every element which has title attribute */
+[title]{color: red;text-decoration: overline;}
+
+/* Attribute selector-- targets every div tag which has title attribute */
+div[title]{color: red;text-decoration: overline;}
+
+/* Attribute selector-- targets every element which has href attribute whose value is index.html */
+[href="index.html"]{color: green;text-decoration: overline;}
+
+/* Attribute selector-- targets every element which has class attribute whose value starts with icon */
+[class^="icon"]{color: green;text-decoration: overline;}
+
+
+
+
+
+.price{
+  font-weight: 700;
+  font-size: 20px;
+}
+  .price:before{
+    content:"\00b6 ";
+  }
+
+
+
+
+
+
+/*=============================================
+=            Feature section            =
+=============================================*/
+.features{}
+.features * {box-sizing: border-box}
+  .features h3{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 30px;
+  }
+  .feature-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+    .feature-list:after{
+      clear: both;
+      display: block;
+      content: "";
+    }
+    .feature-list li{
+      border: solid 1px red;
+      float: left;
+      width: 20%;
+      text-align: center;
+      padding-top: 90px;
+      background-image: url('../img/what-you-get-icons.svg');
+      background-repeat: no-repeat;
+    }
+.feature-list .icn-real-exp {background-position: 44px 0;}
+.feature-list .icn-accom    {background-position: -247px 0;}
+.feature-list .icn-local    {background-position: -514px 0;}
+.feature-list .icn-foodie   {background-position: -760px 0;}
+.feature-list .icn-trans    {background-position: -985px 0;}
+
+.feature-list-icons{
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+  .feature-list-icons:after{
+    clear: both;
+    display: block;
+    content: "";
+  }
+  .feature-list-icons li{
+    border: solid 1px red;
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding-top: 90px;
+    position: relative;
+  }
+  .feature-list-icons li:before{
+    width: 100px;
+    height: 80px;
+    
+    position: absolute;
+    left: 0;right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+
+
+
+    font-family: '90-days' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 80px;
+    font-size: 60px;
+    color: #067ce0;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 250ms ease;
+  }
+  .feature-list-icons li:hover:before{color: green;transform: rotate(360deg)}
+.feature-list-icons .icn-real-exp:before {content: "\e900";}
+.feature-list-icons .icn-accom:before    {content: "\e901";}
+.feature-list-icons .icn-local:before    {content: "\e902";}
+.feature-list-icons .icn-foodie:before   {content: "\e903";}
+.feature-list-icons .icn-trans:before    {content: "\e904";}
+
+
+
+
+
+
+
+
+
+
+
+/*=====  End of Feature section  ======*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
     font-family: 'Dirty Brush';
     src: url('../fonts/DirtyBrush.eot');
     src: url('../fonts/DirtyBrush.eot?#iefix') format('embedded-opentype'),
