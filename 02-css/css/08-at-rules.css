@@ -405,4 +405,20 @@ content: "\e9dc";
 }
 
 
+/**
+ *
+ * Media Queries
+ *
+ */
+
+@media (min-width:768px){
+  body{background-color: #ebc5c5;}
+}
+@media (max-width:767px){
+  body{background-color: #c4e7c4;}
+  .sh{
+    left: -200px;
+  }
+  .wrap{margin-left: 40px;}
+}
 
