@@ -54,14 +54,22 @@ http://mynameismatthieu.com/WOW/
 
 http://animista.net/
 
+https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+
 https://css-tricks.com/snippets/css/keyframe-animation-syntax/
 
-https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes
+https://css-tricks.com/almanac/properties/t/transform/
+
+https://css-tricks.com/almanac/properties/t/transition/
 
 http://cssanimate.com/
 
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+
+
+https://uxdesign.cc/micro-interactions-why-when-and-how-to-use-them-to-boost-the-ux-17094b3baaa0
+
 
 
 */
@@ -221,6 +229,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/animation
   68% { right: 30px; }
   100% { right: 100px; }
 }
+@keyframes colorwar {
+  0% { background-color: #ff00004b; }
+  50% { background-color: #00ff004b; }
+  100% { background-color: #0000ff4b; }
+}
 
 .box2:hover{
 	-webkit-animation: swing-right-bck 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -228,6 +241,17 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/animation
 
 }
 
+
+.box3{
+  width: 75%;
+  min-height: 100px;
+  margin: 50px auto;
+  padding: 40px;
+  border: solid 1px #CCC;
+  border-radius: 10px;
+  animation: colorwar 0.5s ease 1s infinite alternate;
+
+}
 
 
 
@@ -269,3 +293,42 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/animation
             transform-origin: right;
   }
 }
+
+
+
+
+.box4{
+  width: 100px;
+  height: 100px;
+  border: solid 1px red;
+  background-color: rgba(0, 128, 0, 0.365);
+  margin: 40px auto;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+.box4 div{
+  width: 100px;
+  height: 100px;
+  background-color: #0000fF4a;
+  text-align: center;
+  line-height: 100px;
+
+  transform: scale(1.5) rotate(-45deg)
+}
+
+.box5{
+  width: 100px;
+  height: 100px;
+  border: solid 1px red;
+  background-color: rgba(0, 128, 0, 0.365);
+  margin: 40px auto;
+  transition: all 250ms ease;
+  text-align: center;
+  line-height: 100px;
+}
+
+.box5:hover{
+  transform: rotate(360deg);
+  border-radius: 50%;
+}
+

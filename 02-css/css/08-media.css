@@ -367,7 +367,10 @@ template {
 
 
 /* from type scale - Major-Third */
-html {font-size: 16px;}
+html {font-size: 14px;}
+@media (min-width:768px){
+  html{font-size: 16px}
+}
 body {
   font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
@@ -418,6 +421,12 @@ body{background-color: #d3cefe;}
   padding: 15px;
   margin: 15px;
   box-shadow: 0 0 5px 2px rgba(0,0,0,0.25);
+  transition: all 500ms ease-in;
+}
+.container:after{
+  display: block;
+  clear: both;
+  content: "";
 }
 @media (min-width:768px){
   .container{
@@ -435,9 +444,27 @@ body{background-color: #d3cefe;}
 @media (min-width:768px) and (max-width:979px){
   body{background-color: red;}
 }
+.sh{
+  background-color: #5806bc;
+  padding: 15px;
+}
+.sh img{
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-
+.one-half{
+  width: 50%;
+  float: left;
+}
+.bg-blue{
+  background-color: lightblue;
+  min-height: 200px;
+}
+.bg-green{
+  background-color: lightgreen;
+  min-height: 200px;
+}
 
 
 /* Print Specific CSS */
