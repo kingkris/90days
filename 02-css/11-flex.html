@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS FLEX Properties</title>
+  <link rel="stylesheet" href="css/00-common.css">
+  <link rel="stylesheet" href="css/11-flex.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+  <header class="sh">
+    <div class="logo"><img src="img/css-in-style-logo.svg" alt="CSS In Style"></div>
+    <ul class="main-nav">
+      <li><a href="01-type.html">Type</a></li>
+      <li><a href="02-block.html">Block</a></li>
+      <li><a href="03-list.html">list</a></li>
+      <li><a href="04-background.html">background</a></li>
+      <li><a href="05-border.html">border</a></li>
+      <li><a href="06-box.html">box</a></li>
+      <li><a href="07-position.html">position</a></li>
+      <li><a href="08-@rules.html">@ rules</a></li>
+      <li><a href="10-animations.html">animations</a></li>
+      <li class="active"><a href="11-flex.html">flex</a></li>
+      <li><a href="12-grids.html">grids</a></li>
+      <li><a href="13-audio-video.html">audio n video</a></li>
+      <li><a href="14-tables.html">tables</a></li>
+      <li><a href="15-emails.html">emails</a></li>
+      <li><a href="16-forms.html">forms</a></li>
+    </ul>
+  </header><!-- eo .sh -->
+  <div class="wrap">
+    <header class="page-title">
+      <h1>CSS FLEX layouts</h1>
+    </header>
+
+
+
+    
+
+
+    <div class="demo-box">
+      <h2><span>Regular Blocks</span></h2>
+      <div class="demo-content">
+        <div class="box">1 box</div>
+        <div class="box">2 box</div>
+        <div class="box">3 box</div>
+        <div class="box">4 box</div>
+        <div class="box">5 box</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box">
+      <h2><span>Demo of Inline-blocks</span></h2>
+      <div class="demo-content">
+        <div class="box inline-blk">1 box Inline Block</div>
+        <div class="box inline-blk">2 box Inline Block</div>
+        <div class="box inline-blk">3 box Inline Block</div>
+        <div class="box inline-blk">4 box Inline Block</div>
+        <div class="box inline-blk">5 box Inline Block</div>
+        <div class="box inline-blk">6 box Inline Block, this block will have more content</div>
+        <div class="box inline-blk">7 box Inline Block</div>
+        <div class="box inline-blk">8 box Inline Block</div>
+        <div class="box inline-blk">9 box Inline Block</div>
+        <div class="box inline-blk">10 box Inline Block</div>
+        <div class="box inline-blk">11 box Inline Block</div>
+        <div class="box inline-blk">12 box Inline Block</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box">
+      <h2><span>Demo of float - left</span></h2>
+      <div class="demo-content">
+        <div class="box float-left">1 box Float - Left</div>
+        <div class="box float-left">2 box Float - Left</div>
+        <div class="box float-left">3 box Float - Left</div>
+        <div class="box float-left">4 box Float - Left</div>
+        <div class="box float-left">5 box Float - Left</div>
+        <div class="box float-left">6 box Float - Left, this block will have more content</div>
+        <div class="box float-left">7 box Float - Left</div>
+        <div class="box float-left">8 box Float - Left</div>
+        <div class="box float-left">9 box Float - Left</div>
+        <div class="box float-left">10 box Float - Left</div>
+        <div class="box float-left">11 box Float - Left</div>
+        <div class="box float-left">12 box Float - Left</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box">
+      <h2><span>Demo of float - right</span></h2>
+      <div class="demo-content">
+        <div class="box float-right">1 box Float - right</div>
+        <div class="box float-right">2 box Float - right</div>
+        <div class="box float-right">3 box Float - right</div>
+        <div class="box float-right">4 box Float - right</div>
+        <div class="box float-right">5 box Float - right</div>
+        <div class="box float-right">6 box Float - right, this block will have more content</div>
+        <div class="box float-right">7 box Float - right</div>
+        <div class="box float-right">8 box Float - right</div>
+        <div class="box float-right">9 box Float - right</div>
+        <div class="box float-right">10 box Float - right</div>
+        <div class="box float-right">11 box Float - right</div>
+        <div class="box float-right">12 box Float - right</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box">
+      <h2><span>Demo of Flex</span></h2>
+      <div class="demo-content display-flex">
+        <div class="box flex">1 box Flex</div>
+        <div class="box flex">2 box Flex</div>
+        <div class="box flex">3 box Flex</div>
+        <div class="box flex">4 box Flex</div>
+        <div class="box flex">5 box Flex</div>
+        <div class="box flex">6 box Flex, this block will have more content</div>
+        <div class="box flex">7 box Flex</div>
+        <div class="box flex">8 box Flex</div>
+        <div class="box flex">9 box Flex</div>
+        <div class="box flex">10 box Flex</div>
+        <div class="box flex">11 box Flex</div>
+        <div class="box flex">12 box Flex</div>
+      </div>
+      <div class="demo-content display-flex">
+        <div class="box flex">1 box Flex</div>
+        <div class="box flex">2 box Flex</div>
+        <div class="box flex">3 box Flex</div>
+        <div class="box flex">4 box Flex</div>
+        <div class="box flex">5 box Flex</div>
+        <div class="box flex">6 box Flex, this block will have more content</div>
+        <div class="box flex">7 box Flex</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+  
+    <div class="demo-box">
+      <h2><span>Demo of Flex</span> <i>flex-direction</i></h2>
+      <div class="demo-content display-flex flex-direction">
+        <div class="box flex">1 box Flex</div>
+        <div class="box flex">2 box Flex</div>
+        <div class="box flex">3 box Flex</div>
+        <div class="box flex">4 box Flex</div>
+        <div class="box flex">5 box Flex</div>
+        <div class="box flex">6 box Flex, this block will have more content</div>
+        <div class="box flex">7 box Flex</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+    <div class="demo-box">
+      <h2><span>Demo of Flex</span> <i>flex-wrap, justify-content</i></h2>
+      <div class="demo-content display-flex flex-wrap justify-content">
+        <div class="box flex">1 box Flex</div>
+        <div class="box flex">2 box Flex</div>
+        <div class="box flex">3 box Flex</div>
+        <div class="box flex">4 box Flex</div>
+        <div class="box flex">5 box Flex</div>
+        <div class="box flex">6 box Flex, this block will have more content</div>
+        <div class="box flex">7 box Flex</div>
+        <div class="box flex">8 box Flex</div>
+        <div class="box flex">9 box Flex</div>
+        <div class="box flex">10 box Flex</div>
+        <div class="box flex">11 box Flex</div>
+        <div class="box flex">12 box Flex</div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+
+    <div class="demo-box">
+      <h2><span>Product List</span></h2>
+      <div class="demo-content products">
+        <div class="product product1">
+          <div>Products 01</div>
+        </div>
+        <div class="product product2">
+          <div>Products 02</div>
+        </div>
+        <div class="product">
+          <div>Products 03</div>
+        </div>
+        <div class="product">
+          <div>Products 04</div>
+        </div>
+        <div class="product">
+          <div>Products 05</div>
+        </div>
+        <div class="product">
+          <div>Products 06</div>
+        </div>
+        <div class="product">
+          <div>Products 07</div>
+        </div>
+        <div class="product">
+          <div>Products 08</div>
+        </div>
+        <div class="product">
+          <div>Products 09</div>
+        </div>
+        <div class="product">
+          <div>Products 10</div>
+        </div>
+        <div class="product">
+          <div>Products 11</div>
+        </div>
+        <div class="product">
+          <div>Products 12</div>
+        </div>
+      </div>
+    </div><!-- eo .demo-box .demo-box-big -->
+
+
+
+
+
+    
+
+
+
+<div class="spacer"></div>
+
+    
+  </div><!-- eo .wrap -->
+</body>
+</html>

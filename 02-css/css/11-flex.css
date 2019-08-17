@@ -54,6 +54,67 @@ https://webdesign.tutsplus.com/articles/15-inspiring-examples-of-css-animation-o
 https://flexbox.webflow.com/#collectiongrid
 
 */
+.demo-content:after{
+  display: block;
+  clear: both;
+  content: "";
+}
+.box{
+  width: 100px;
+  border: solid 1px red;
+  min-height: 40px;
+  padding: 10px;
+  
+}
+.inline-blk{display: inline-block}
+.float-left{float: left}
+.float-right{float: right}
+
+.display-flex{display: flex;}
+
+
+.flex-direction{
+  flex-direction: row-reverse
+}
+.flex-wrap{flex-wrap: wrap}
+.justify-content{justify-content: center}
+
+
+
+.products{
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+
+}
+.product{
+  padding: 10px;
+  flex: 1 0 auto;
+  width: 20%;
+}
+.product div{
+  border: solid 1px #CCC;
+  background-color: #f3f3f3;
+  border-radius: 10px;
+  min-height: 100px;
+  padding: 10px;
+}
+.product1{
+  flex-basis: 30%;
+}
+.product2{
+  flex-basis: 50%;
+}
+
+
+
+
+
+
+
+
 
 /* ==========================================================================
    Demo of Flex related properties
