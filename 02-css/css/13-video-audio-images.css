@@ -77,6 +77,11 @@ http://animista.net/
   width: 50vw
 }
 
+.box{
+  width: 33%;
+  border: solid 1px #CCC;
+  padding: 15px;
+}
 
 /*----------  Aspect ratio  ----------*/
 

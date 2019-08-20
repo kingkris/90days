@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Forms</title>
+  <link rel="stylesheet" href="css/00-common.css">
+  <link rel="stylesheet" href="css/15-forms.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  
+</head>
+<body>
+  <header class="sh">
+    <div class="logo"><img src="img/css-in-style-logo.svg" alt="CSS In Style"></div>
+    <ul class="main-nav">
+      <li><a href="01-type.html">Type</a></li>
+      <li><a href="02-block.html">Block</a></li>
+      <li><a href="03-list.html">list</a></li>
+      <li><a href="04-background.html">background</a></li>
+      <li><a href="05-border.html">border</a></li>
+      <li><a href="06-box.html">box</a></li>
+      <li><a href="07-position.html">position</a></li>
+      <li><a href="08-@rules.html">@ rules</a></li>
+      <li><a href="10-animations.html">animations</a></li>
+      <li><a href="11-flex.html">flex</a></li>
+      <li><a href="12-grids.html">grids</a></li>
+      <li><a href="13-audio-video.html">audio n video</a></li>
+      <li><a href="14-tables.html">tables</a></li>
+      <li><a href="15-emails.html">emails</a></li>
+      <li class="active"><a href="16-forms.html">forms</a></li>
+    </ul>
+  </header><!-- eo .sh -->
+  <div class="wrap">
+    <header class="page-title">
+      <h1>Forms</h1>
+      <p>Learn about all style properties related to lists in a eloborate way with examples</p>
+
+    </header>
+
+
+
+    
+
+
+    <div class="demo-box demo-box-big">
+        <h2><span>box with background image - </span></h2>
+        <div class="demo-content">
+  
+            <div class="cover-pic">
+                <h1> “Some people never go crazy. What truly horrible lives they must lead.”
+                ― <cite>Charles Bukowski </cite></h1>
+              </div>
+              
+  
+        </div>
+      </div><!-- eo .demo-box .demo-box-big -->
+  
+
+<div class="demo-box">
+  <h2 class="sub-title"><span>Demo of</span> &lt;form&gt; tag with method="get"</h2>
+  <div class="demo-content">
+    <form action="thankyou.html" method="get" name="getform" >
+      <input type="text" name="gf-Username" placeholder="Enter your username" required maxlength="10" />
+      <input type="password" name="gf-Pasword" placeholder="Enter your password" />
+      <input type="submit" value="Get Form Submit" formnovalidate>
+    </form>
+  </div>
+</div><!-- eo .demo-box -->
+
+<div class="demo-box">
+    <h2 class="sub-title"><span>Demo of</span> &lt;form&gt; tag with method="post"</h2>
+    <div class="demo-content">
+      <form action="thankyou.html" method="post" name="postform">
+      <input type="text" name="Username" placeholder="Enter your username" />
+      <input type="password" name="Pasword" placeholder="Enter your password" />
+      <input type="submit" value="Post form Submit">
+    </form>
+  </div>
+</div><!-- eo .demo-box -->
+
+
+<div class="demo-box">
+	<h2><span>Demo of</span> &lt;fieldset &gt;, &lt;legend &gt;, &lt;label &gt; </h2>
+  <div class="demo-content">
+    <form action="forms_submit" method="get" class="form1">
+      <fieldset>
+        <legend>Fieldset Demo</legend>
+        <p>Here we learn to use the fieldset tag</p>
+        <div class="f-row">
+          <label for="f-name">First Name</label>
+          <input type="text" name="fname" id="f-name" placeholder="Enter your first name">
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="l-name">Last Name</label>
+          <input type="text" name="lname" id="l-name" placeholder="Enter your last name">
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label>Last Name
+            <input type="text" name="lname1" id="l-name1" placeholder="Enter your last name">
+          </label>
+        </div><!-- /.f-row -->
+      </fieldset>
+    </form>   
+  </div>
+</div><!-- eo .demo-box -->
+
+
+<div class="demo-box">
+	<h2><span>Demo of</span> attributes like placeholder, required<sup>*</sup>, readonly<sup>*</sup>, disabled<sup>*</sup>, value, autofocus, maxlength   </h2>
+  <div class="demo-content">
+    <form action="forms_submit" method="get" class="form1">
+      <fieldset>
+        <legend>Form Attributes Demo</legend>
+        <div class="f-row">
+          <label for="f1-1">Placeholder</label>
+          <input type="text" name="fname" id="f1-1" placeholder="Enter your first name">
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="f1-2">Required - icon bg</label>
+          <input type="text" name="f1-2" id="f1-2" placeholder="Enter your last name" required class="input-icon">
+          <div class="error-msg">You need to add your last name</div>
+        </div><!-- /.f-row -->
+
+
+
+        <div class="f-row">
+          <label for="f1-22">Required - font icon</label>
+          <div class="input-font-icon">
+            <input type="text" name="f1-22" id="f1-22" placeholder="Enter your last name">
+          </div>
+          <div class="error-msg">You need to add your last name</div>
+        </div><!-- /.f-row -->
+
+
+        <div class="f-row">
+          <label for="f1-3">Error Message</label>
+          <input type="email" name="f1-3" id="f1-3" placeholder="Enter your email" required>
+          <div class="error-msg">You need to enter your correct email</div>
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="f1-4">Readonly and Value</label>
+          <input type="email" name="f1-4" id="f1-4" placeholder="Enter your email" readonly value="kris@htmlden.com">
+          <div class="error-msg">You need to enter your correct email</div>
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="f1-5">Disabled and value</label>
+          <input type="email" name="f1-5" id="f1-5" placeholder="Enter your email" disabled value="kris@htmlden.com">
+          <div class="error-msg">You need to enter your correct email</div>
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="f1-6">autofocus</label>
+          <input type="email" name="f1-6" id="f1-6" placeholder="Enter your email" autofocus value="kris@htmlden.com">
+          <div class="error-msg">You need to enter your correct email</div>
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <label for="f1-7">maxlength</label>
+          <input type="text" name="f1-7" id="f1-7" placeholder="You can enter only 5 characters" maxlength="5" required >
+          <div class="error-msg">You have to enter only 5 characters</div>
+        </div><!-- /.f-row -->
+        <div class="f-row">
+          <input type="submit" name="" value="Submit">
+        </div>
+
+      </fieldset>
+    </form>
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+<div class="demo-box demo-box-big">
+  <h2><span>Tables</span></h2>
+  <div class="demo-content">
+
+  </div>
+</div><!-- eo .demo-box .demo-box-big -->
+
+
+
+
+<div class="spacer"></div>
+
+    
+  </div><!-- eo .wrap -->
+</body>
+</html>

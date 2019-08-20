@@ -28,6 +28,26 @@ empty-cells – show | hide
   display: block;
 }
 
+.new-tbl{ 
+  border: solid 5px red;
+  border-collapse: collapse;
+  border-spacing: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.new-tbl tr{ border: solid 5px green }
+.new-tbl tr td{ border: solid 5px blue }
+._column1{
+  width: 120px;
+  padding: 10px;
+}
+._column2{
+  width: 180px;
+  padding: 10px;
+}
+
 
 /*----------  Width demo  ----------*/
 
