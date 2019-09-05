@@ -402,14 +402,26 @@ small, .text_small {font-size: 0.75em;}
   position: sticky;
   top: 0;
 }
-.fixed-header-2{
+.fixed-header h1{
   background-color: burlywood;
   padding: 10px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+}
+
+.fixed-header-2{
+  background-color: #2196F3;
+  padding: 1px;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+}
+.fixed-header-2 h1{
+  background-color: #1976D2;
+  color: #FFF;
 }
 .fixed-nav{
   padding-top: 100px;
