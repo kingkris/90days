@@ -1,0 +1,19 @@
+.widget{
+  margin: 15px;
+  border:solid 1px lighten($secondary-color,20%);
+  background-color: lighten($secondary-color,40%);
+  border-radius: 10px;
+  h2{
+    margin: 0;
+    background-color: $primary-color;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+  }
+  p{
+    padding: 10px;
+  }
+  &._bdr-primary{
+    border: solid 1px $primary-color;
+  }
+}

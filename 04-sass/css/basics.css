@@ -1,2 +1,137 @@
-*{margin:0;padding:0}body{background-color:#edf6e3;color:#444;font-family:"Lato",sans-serif;font-weight:300}h1,h2,h3,h4,h5,h6{color:#577d2a;font-family:"Roboto Slab",serif}a{color:#8BC34A;text-decoration:none}a:hover{color:#649130}.sh{background-color:#d5e9bd;padding:10px}.sh h1{text-align:center}
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+/* from type scale - Major-Third */
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #e6b5ee;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  line-height: 1.45;
+  color: #444;
+  font-size: 16px;
+}
+
+p {
+  margin-bottom: 1.25em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: "Roboto Slab", serif;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #52145d;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209em;
+}
+
+h2 {
+  font-size: 3.157em;
+}
+
+h3 {
+  font-size: 2.369em;
+}
+
+h4 {
+  font-size: 1.777em;
+}
+
+h5 {
+  font-size: 1.333em;
+}
+
+small, .text_small {
+  font-size: 0.75em;
+}
+
+a {
+  color: #9C27B0;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #641971;
+}
+
+/* Common Layout styles */
+img {
+  display: block;
+}
+
+.sh {
+  background-color: #d88be5;
+  padding: 10px;
+}
+.sh h1 {
+  text-align: center;
+}
+.sh nav {
+  text-align: center;
+}
+.main-links {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.main-links li {
+  display: inline-block;
+  padding: 0 5px;
+}
+.main-links li a {
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  padding: 6px 15px;
+  background-color: #edc9f3;
+  border-radius: 25px;
+  color: #448AFF;
+}
+.main-links li a:hover {
+  background-color: #448AFF;
+  color: #9C27B0;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto 30px;
+}
+.container._bdr-primary {
+  border: solid 1px #9C27B0;
+}
+
+.widget {
+  margin: 15px;
+  border: solid 1px #aacaff;
+  background-color: white;
+  border-radius: 10px;
+}
+.widget h2 {
+  margin: 0;
+  background-color: #9C27B0;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+}
+.widget p {
+  padding: 10px;
+}
+.widget._bdr-primary {
+  border: solid 1px #9C27B0;
+}
+
 /*# sourceMappingURL=basics.css.map */

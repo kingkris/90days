@@ -1,0 +1,48 @@
+*,
+*:after,
+*:before {box-sizing: border-box;}
+
+
+/* from type scale - Major-Third */
+html {font-size: 16px;}
+body {
+  background-color: $bg-color;
+  font-family: $primary-font;
+  font-weight: $primary-font-weight;
+  line-height: 1.45;
+  color: $text-color;
+  font-size: $base-font-size;
+}
+p {margin-bottom: 1.25em;}
+h1, 
+h2, 
+h3, 
+h4, 
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: $heading-font;
+  font-weight: 700;
+  line-height: 1.15;
+  color: $heading-color;
+}
+h1 {
+  margin-top: 0;
+  font-size: 4.209em;
+}
+h2 {font-size: 3.157em;}
+h3 {font-size: 2.369em;}
+h4 {font-size: 1.777em;}
+h5 {font-size: 1.333em;}
+small, .text_small {font-size: 0.75em;}
+
+
+a{
+  color:$link-color;
+  text-decoration: none;
+}
+a:hover{
+  color:$link-hover-color;
+}
+
+/* Common Layout styles */
+img{display: block;}
