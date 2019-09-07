@@ -1,0 +1,37 @@
+@mixin bdr($bdr-color) {
+  border:{
+    top: solid 1px $bdr-color;
+    right: dotted 1px $secondary-color;
+    bottom: solid 3px $bdr-color;
+    left: solid 4px $bdr-color;
+    radius:10px;
+  }
+}
+@mixin square($box-width) {
+  width: $box-width;
+  height: $box-width;
+  overflow: hidden;
+  padding: 10px;
+}
+
+@mixin block-align-center {
+  margin: { 
+      left: auto;
+      right: auto;
+  }
+}
+
+
+@mixin responsive-ratio($x,$y, $pseudo: false) {
+  $padding: unquote( ( $y / $x ) * 100 + '%' );
+  @if $pseudo {
+      &:before {
+          @include pseudo($pos: relative);
+          width: 100%;
+          padding-top: $padding;
+      }
+  } @else {
+      padding-top: $padding;
+  }
+}
+

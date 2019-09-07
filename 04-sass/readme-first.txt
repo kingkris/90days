@@ -7,3 +7,10 @@ sass --watch scss:css --style compact
 
 
 
+Variables
+Nesting
+  ~ @at-root
+  ~ &:hover
+
+Partials
+@import
