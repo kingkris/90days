@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My First Layout</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/layouts.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <div class="wrapper">
+    <header class="site-header">
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="img/logo-master-css.png" alt="Master CSS - from a master"></a>
+        </div>
+        <div class="ham">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <nav class="site-nav">
+          <a href="#" class="active">Home</a>
+          <a href="#">About Me</a>
+          <a href="#">Works</a>
+          <a href="#">Gallery</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Me</a>
+        </nav>
+      </div>
+    </header>
+    <div class="banner">
+      <img src="img/banner-image.jpg" alt="banner image">
+    </div> <!-- eo banner -->
+    <section class="grey-bg">
+      <div class="container">
+        <header class="section-header">
+          <h1>This is the main heading of the page</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe deleniti, eaque veniam aliquid qui voluptate itaque reprehenderit hic quae consequatur laudantium odit dolores id aliquam consequuntur excepturi velit recusandae officia?</p>
+        </header>
+        <div class="row">
+          <div class="col-full">
+            <h1>This is a widget</h1>
+            <div class="box">
+              <div class="text-demo" id="text-demo">This is the text written in html markup</div>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, maxime in? Nam perferendis eum dolorum dolor fuga, inventore natus, alias debitis corrupti velit ad dolores? Velit magnam tempore ducimus nostrum.</p>
+            </div>
+          </div>
+        </div><!-- eo row -->
+            
+      </div><!-- eo container -->
+    </section>
+  </div><!-- eo wrapper -->
+
+
+
+  <script>
+
+    user_name = "Raju";
+
+    x = 100;
+    y = "100";
+    z = 100;
+    console.log("x: " + x);
+    console.log("y: " + y);
+    console.log("z: " + z);
+    console.log("x+y: " + (x+y));
+    console.log("x+z: " + (x+z));
+
+    // statement = "<p> The user name is " + user_name + "</p>";
+    //statement = '<p> The user name is "' + user_name + '"</p>';
+    statement = '<p> The user name is <q>' + user_name + '</q></p>';
+
+    document.getElementById('text-demo').innerHTML = statement;
+
+
+  </script>
+
+
+</body>
+</html>
