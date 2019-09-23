@@ -558,3 +558,27 @@ img{display: block;}
   font-weight: bold;
   text-decoration: underline;
 }
+#text-demo p{
+  font-size: 40px;
+  line-height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.color1{color: red}
+.color2{color: blue}
+.color3{color: green}
+.color4{color: orange}
+.color5{color: purple}
+.color6{color: violet}
+.color7{color: yellow}
+.color8{color: black}
+
+
+
+
+
+
+
+
+
+

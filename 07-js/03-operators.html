@@ -57,69 +57,76 @@
 
 
 
-  <script>
+<script>
+  a = 10;
+  b = "10";
+  c = 100;
+  list = ['apple', 'mango', 'banana']
 
-    user_name = "Raju";
+  console.log(a + b);
+  console.log(a * b);
+  console.log(a - b);
+  console.log(a / b);
 
-    x = 100;
-    y = "100";
-    z = 100;
-    fruits = ['apple', 'orange', 'grape', 'watermelon'];
-    console.log("x: " + x);
-    console.log("y: " + y);
-    console.log("z: " + z);
-    console.log("x+y: " + (x+y));
-    console.log("x+z: " + (x+z));
-    console.log(fruits);
-    console.log(fruits[0]);
-    console.log(fruits.length);
-    console.log(fruits.pop())
-    console.log(fruits);
+  console.log(a * b - c);
+  console.log(a * list);
+  console.log(a + list);
+  console.log(a * list[0]);
+  console.log(a + list[0]);
 
-    // statement = "<p> The user name is " + user_name + "</p>";
-    //statement = '<p> The user name is "' + user_name + '"</p>';
-    statement = '<p> The user name is <q>' + user_name + '</q></p>';
+  if(a === b){
+    console.log("YES, they are equal");
+  }
+  if (a >= 10) {
+    console.log("YES, it is big");    
+  }
 
-    document.getElementById('text-demo').innerHTML = statement;
+  if (a==10) {
+    // do something if its true
 
-    var boolean_x = "This is a string";
-    console.log(boolean_x);
+  } else {
+    // do something if its false
 
-    if(boolean_x){
-      console.log("Yes there is boolean_x");
-      console.log(boolean_x);
-    }
-
+  }
 
 
-  const person = {
-    name: ['Bob', 'Smith'],
-    age: 32,
-    gender: 'male',
-    interests: ['music', 'skiing'],
-    bio: function() {
-      alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
-    },
-    greeting: function() {
-      alert('Hi! I\'m ' + this.name[0] + '.');
-    }
-  };
+  var randomNumber = Math.floor(Math.random() * 6) + 1;
+  i =0;
+  while(randomNumber<=5){
+    console.log(++i);
+    console.log("randomNumber is " + randomNumber);
+    randomNumber = Math.floor(Math.random() * 6) + 1;
+  }
+  console.log("It looped  " + i + " times");
 
-  console.log(person.name);
-  console.log(person.name[0]);
-  console.log(person.age);
-  console.log(person.interests[1]);
-  console.log();
-  console.log();
-  console.log();
+  var triangleelem;
   
-person.bio()
-person.greeting()
+  function triangle(rows) {
+    for(i = 0; i<rows; i++){
+      triangleelem += "<p>";
+      for(j=0;j<=i;j++){
+        triangleelem += " * ";
+      }
+      triangleelem += "</p>";
+    }
+    document.getElementById('text-demo').innerHTML = triangleelem;
+  }
+
+
+  printtriangle = Math.floor(Math.random() * 10) + 1;
+  console.log("printtriangle = " + printtriangle);
+
+  for(i=0; i<=printtriangle; i++){
+    row = Math.floor(Math.random() * 12) + 1;
+    console.log("row = " + row);
+    console.log(i);
+
+    triangle(row);
+  }
 
 
 
-
-  </script>
+</script>
 
 
 </body>

@@ -558,3 +558,9 @@ img{display: block;}
 
 /*=====  End of Custom Styles by KriS  ======*/
 
+#text-demo p{
+  font-size: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+}

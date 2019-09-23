@@ -57,69 +57,37 @@
 
 
 
-  <script>
+<script>
 
-    user_name = "Raju";
-
-    x = 100;
-    y = "100";
-    z = 100;
-    fruits = ['apple', 'orange', 'grape', 'watermelon'];
-    console.log("x: " + x);
-    console.log("y: " + y);
-    console.log("z: " + z);
-    console.log("x+y: " + (x+y));
-    console.log("x+z: " + (x+z));
-    console.log(fruits);
-    console.log(fruits[0]);
-    console.log(fruits.length);
-    console.log(fruits.pop())
-    console.log(fruits);
-
-    // statement = "<p> The user name is " + user_name + "</p>";
-    //statement = '<p> The user name is "' + user_name + '"</p>';
-    statement = '<p> The user name is <q>' + user_name + '</q></p>';
-
-    document.getElementById('text-demo').innerHTML = statement;
-
-    var boolean_x = "This is a string";
-    console.log(boolean_x);
-
-    if(boolean_x){
-      console.log("Yes there is boolean_x");
-      console.log(boolean_x);
-    }
-
-
-
-  const person = {
-    name: ['Bob', 'Smith'],
-    age: 32,
-    gender: 'male',
-    interests: ['music', 'skiing'],
-    bio: function() {
-      alert(this.name[0] + ' ' + this.name[1] + ' is ' + this.age + ' years old. He likes ' + this.interests[0] + ' and ' + this.interests[1] + '.');
-    },
-    greeting: function() {
-      alert('Hi! I\'m ' + this.name[0] + '.');
-    }
-  };
-
-  console.log(person.name);
-  console.log(person.name[0]);
-  console.log(person.age);
-  console.log(person.interests[1]);
-  console.log();
-  console.log();
-  console.log();
+  var triangleelem = "<h2>The triangle begins</h2>";
   
-person.bio()
-person.greeting()
+  function triangle(rows) {
+    elestyle = "color"+ generateRandomNumber(8);
+    console.log(elestyle);
+    for(i = 0; i<rows; i++){
+      triangleelem += "<p class='" + elestyle + "'>";
+      for(j=0;j<=i;j++){
+        triangleelem += " * ";
+      }
+      triangleelem += "</p>";
+    }
+    document.getElementById('text-demo').innerHTML = triangleelem;
+  }
 
+  function generateRandomNumber(limit){
+    return (Math.floor(Math.random() * limit) + 1)
+  }
 
+  printtriangle = generateRandomNumber(10);
+  console.log("printtriangle = " + printtriangle);
 
-
-  </script>
+  for(x=0; x<printtriangle; x++){
+    row = generateRandomNumber(12);
+    triangle(row);
+    console.log("row = " + row);
+    console.log("x = " + x);
+  }
+</script>
 
 
 </body>
