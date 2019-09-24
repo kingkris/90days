@@ -57,51 +57,67 @@
 
 
 
-<script>
+  <script>
 
-  var triangleelem = "<h2>The triangle begins</h2>";
-  
-  function triangle(rows) {
-    elestyle = "color"+ generateRandomNumber(8);
-    console.log(elestyle);
-    for(i = 0; i<rows; i++){
-      triangleelem += "<p class='" + elestyle + "'>";
-      for(j=0;j<=i;j++){
-        triangleelem += " * ";
-      }
-      triangleelem += "</p>";
-    }
-    document.getElementById('text-demo').innerHTML = triangleelem;
-    // document.querySelector('.text-demo').innerHTML = triangleelem;
-  }
 
-  // you can create functions in two ways
-  // ****************************************
 
-  // creating function - 1st way
   function generateRandomNumber(limit){
     return (Math.floor(Math.random() * limit) + 1)
   }
 
-  // creating function - 2nd way
-  generateRandomNumber2 = function(limit){
-    return (Math.floor(Math.random() * limit) + 1)
-  }
-
-  printtriangle = generateRandomNumber(10);
-  console.log("printtriangle = " + printtriangle);
-
-  for(x=0; x<printtriangle; x++){
-    row = generateRandomNumber(12);
-    triangle(row);
-    console.log("row = " + row);
-    console.log("x = " + x);
-  }
 
 
 
+    fruits = ['apple', 'orange', 'grape', 'watermelon', 'banana', 'mango', 'gauva', 'jackfruit'];
+    var list = new Array;
+    var newlist = new Array(10, 'tomato', 'dracula', 'sugar', 'apple' ,'banana', 'coffee');
 
-</script>
+    console.log(fruits);
+    console.log(fruits[0]);
+    console.log(fruits.length);
+    console.log(fruits.pop())
+    console.log(fruits);
+
+    console.log(list.length);
+    console.log(newlist);
+    newlist.sort();
+    console.log(newlist);
+    newlist.reverse();
+    console.log(newlist);
+
+    for(i=0;i<newlist.length;i++){
+      console.log(newlist[i]);
+    }
+
+    var elem = "<hr>";
+    function printArray(array){
+      elem += "<ul>";
+      array.forEach(item => {
+        elem += "<li>" + item + "</li>";
+      });
+      elem += "</ul> <hr>";
+      document.querySelector('.text-demo').innerHTML = elem;
+    }
+
+    function makeTeam(array) {
+      poolofplayers = array;
+      
+      newteam = new Array;
+      printArray(poolofplayers);
+      
+      for(i=0;i<4;i++){
+        limit = (poolofplayers.length) - 1;
+        y = generateRandomNumber(limit);
+        newteam[i]=poolofplayers[y];
+        poolofplayers.splice(y,1);
+      }
+      printArray(newteam);
+      printArray(poolofplayers);
+    }
+
+    makeTeam(fruits);
+
+  </script>
 
 
 </body>
