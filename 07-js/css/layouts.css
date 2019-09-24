@@ -445,9 +445,10 @@ img{display: block;}
 .col-three-fourth{width: 75%;}
 
 .box{
-  background-color: lightgrey;
+  background-color: aliceblue;
   min-height: 40px;
   padding: 10px;
+  border-radius: 10px;
 }
 
 /* clearfixes */

@@ -43,7 +43,6 @@
         </header>
         <div class="row">
           <div class="col-full">
-            <h1>This is a widget</h1>
             <div class="box">
               <div class="text-demo" id="text-demo">This is the text written in html markup</div>
               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi, maxime in? Nam perferendis eum dolorum dolor fuga, inventore natus, alias debitis corrupti velit ad dolores? Velit magnam tempore ducimus nostrum.</p>
@@ -90,7 +89,8 @@
     }
 
     var elem = "<hr>";
-    function printArray(array){
+    function printArray(array,message){
+      elem += "<h4>" + message + "</h4>";
       elem += "<ul>";
       array.forEach(item => {
         elem += "<li>" + item + "</li>";
@@ -103,7 +103,7 @@
       poolofplayers = array;
       
       newteam = new Array;
-      printArray(poolofplayers);
+      printArray(poolofplayers,"Pool of Players");
       
       for(i=0;i<4;i++){
         limit = (poolofplayers.length) - 1;
@@ -111,8 +111,8 @@
         newteam[i]=poolofplayers[y];
         poolofplayers.splice(y,1);
       }
-      printArray(newteam);
-      printArray(poolofplayers);
+      printArray(newteam, "New Team");
+      printArray(poolofplayers,"Unselected Players");
     }
 
     makeTeam(fruits);
